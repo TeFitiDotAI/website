@@ -88,12 +88,7 @@ div.description {
   opacity: 70%;
 }
 
-.post-iframe {
-    display: block; /* Ensures it behaves like a block element */
-    margin: 20px auto; /* Centers the iframe horizontally */
-    max-width: 100%; /* Makes it responsive to smaller screens */
-    height: auto; /* Adjusts height proportionally for responsiveness */
-}
+
 
 
 
