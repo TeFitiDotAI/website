@@ -1,1 +1,1 @@
-Sitemap: https://tefitidotai.github.io/website/sitemap.xml
+Sitemap: https://tefitidotai.github.io/website/blog.html/sitemap.xml
