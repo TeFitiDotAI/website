@@ -13,13 +13,14 @@ website:
     image: street.jpg
     card-style: summary
     creator: "@tefiti"
-  site-url: https://isaac-flath.tech/
+  site-url: https://tefitidotai.github.io/website/
   description: "Blog for machine learning, programming, computer science and other data science related topics"
   navbar:
     right:
       
-      - text: "Home"
+      - text: "Blog"
         file: blog.qmd
+  home: blog.qmd
       #- text: "TIL"
       #  file: til.qmd
       #- text: "Testimonials"
