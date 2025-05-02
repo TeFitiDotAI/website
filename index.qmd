@@ -1,5 +1,6 @@
 ---
-title: "Isaac Flath"
+title: "Home"
+visible: false
 image: street.jpg
 about:
   template: jolla
