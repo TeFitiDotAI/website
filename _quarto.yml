@@ -13,36 +13,31 @@ website:
     image: street.jpg
     card-style: summary
     creator: "@tefiti"
-  site-url: https://tefitidotai.github.io/website/blog.html
+  site-url: https://tefitidotai.github.io/website/
   description: "Blog for machine learning, programming, computer science and other data science related topics"
   navbar:
     right:
-      
       - text: "Blog"
         file: blog.qmd
-  home: blog.qmd
-      #- text: "TIL"
-      #  file: til.qmd
-      #- text: "Testimonials"
-      #  file: testimonials.ipynb
-  page-footer: 
-    left: "Te Fiti" 
-    right: 
-      - icon: linkedin
-        text: LinkedIn
-        href: "#"
-      - icon: github
-        text: Github
-        href: "#"
-      - icon: twitter
-        text: Twitter
-        href: "#"
-      - icon: rss
-        text: Blog RSS
-        href: blog.xml
-      - icon: rss
-        text: TIL RSS
-        href: til.xml
+home: blog.qmd
+page-footer: 
+  left: "Te Fiti" 
+  right: 
+    - icon: linkedin
+      text: LinkedIn
+      href: "#"
+    - icon: github
+      text: Github
+      href: "#"
+    - icon: twitter
+      text: Twitter
+      href: "#"
+    - icon: rss
+      text: Blog RSS
+      href: blog.xml
+    - icon: rss
+      text: TIL RSS
+      href: til.xml
 format:
   html:
     css: styles.css

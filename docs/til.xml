@@ -6,15 +6,15 @@
       version="2.0">
 <channel>
 <title>Te Fiti</title>
-<link>https://isaac-flath.tech/til.html</link>
-<atom:link href="https://isaac-flath.tech/til.xml" rel="self" type="application/rss+xml"/>
+<link>https://tefitidotai.github.io/website/til.html</link>
+<atom:link href="https://tefitidotai.github.io/website/til.xml" rel="self" type="application/rss+xml"/>
 <description>Blog for machine learning, programming, computer science and other data science related topics</description>
 <generator>quarto-1.3.450</generator>
 <lastBuildDate>Sat, 21 Sep 2024 00:00:00 GMT</lastBuildDate>
 <item>
   <title>NBDev Non Lib Exports</title>
   <dc:creator>Isaac Flath</dc:creator>
-  <link>https://isaac-flath.tech/TIL/NbdevNonLibExports.html</link>
+  <link>https://tefitidotai.github.io/website/TIL/NbdevNonLibExports.html</link>
   <description><![CDATA[ 
 
 
@@ -34,13 +34,13 @@
   <category>Python</category>
   <category>Web Development</category>
   <category>Nbdev</category>
-  <guid>https://isaac-flath.tech/TIL/NbdevNonLibExports.html</guid>
+  <guid>https://tefitidotai.github.io/website/TIL/NbdevNonLibExports.html</guid>
   <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Download Youtube Videos with yt-dlp</title>
   <dc:creator>Isaac Flath</dc:creator>
-  <link>https://isaac-flath.tech/TIL/YoutubeTerminalDownload.html</link>
+  <link>https://tefitidotai.github.io/website/TIL/YoutubeTerminalDownload.html</link>
   <description><![CDATA[ 
 
 
@@ -67,13 +67,13 @@ font-style: inherit;">"&lt;url&gt;"</span></span></code></pre></div>
 
  ]]></description>
   <category>terminal</category>
-  <guid>https://isaac-flath.tech/TIL/YoutubeTerminalDownload.html</guid>
+  <guid>https://tefitidotai.github.io/website/TIL/YoutubeTerminalDownload.html</guid>
   <pubDate>Wed, 21 Aug 2024 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>URL Redirect with a delay</title>
   <dc:creator>Isaac Flath</dc:creator>
-  <link>https://isaac-flath.tech/TIL/DelayedRedirect.html</link>
+  <link>https://tefitidotai.github.io/website/TIL/DelayedRedirect.html</link>
   <description><![CDATA[ 
 
 
@@ -144,13 +144,13 @@ font-style: inherit;">404</span>:_not_found})</span>
   <category>FastHTML</category>
   <category>Python</category>
   <category>Web Development</category>
-  <guid>https://isaac-flath.tech/TIL/DelayedRedirect.html</guid>
+  <guid>https://tefitidotai.github.io/website/TIL/DelayedRedirect.html</guid>
   <pubDate>Mon, 19 Aug 2024 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Evaluate Reverse Polish Notation</title>
   <dc:creator>Isaac Flath</dc:creator>
-  <link>https://isaac-flath.tech/TIL/Evaluate Reverse Polish Notation.html</link>
+  <link>https://tefitidotai.github.io/website/TIL/Evaluate Reverse Polish Notation.html</link>
   <description><![CDATA[ 
 
 
@@ -349,13 +349,13 @@ font-style: inherit;"># Last value remaining is the answer</span></span>
   <category>array</category>
   <category>math</category>
   <category>stack</category>
-  <guid>https://isaac-flath.tech/TIL/Evaluate Reverse Polish Notation.html</guid>
+  <guid>https://tefitidotai.github.io/website/TIL/Evaluate Reverse Polish Notation.html</guid>
   <pubDate>Sun, 10 Mar 2024 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Min Stack</title>
   <dc:creator>Isaac Flath</dc:creator>
-  <link>https://isaac-flath.tech/TIL/Min Stack.html</link>
+  <link>https://tefitidotai.github.io/website/TIL/Min Stack.html</link>
   <description><![CDATA[ 
 
 
@@ -616,13 +616,13 @@ font-style: inherit;">1</span>]</span></code></pre></div>
  ]]></description>
   <category>stack</category>
   <category>design</category>
-  <guid>https://isaac-flath.tech/TIL/Min Stack.html</guid>
+  <guid>https://tefitidotai.github.io/website/TIL/Min Stack.html</guid>
   <pubDate>Sat, 24 Feb 2024 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Trapping Rain Water</title>
   <dc:creator>Isaac Flath</dc:creator>
-  <link>https://isaac-flath.tech/TIL/Trapping Rain Water/Trapping Rain Water.html</link>
+  <link>https://tefitidotai.github.io/website/TIL/Trapping Rain Water/Trapping Rain Water.html</link>
   <description><![CDATA[ 
 
 
@@ -634,7 +634,7 @@ font-style: inherit;">1</span>]</span></code></pre></div>
 <section id="problem-description" class="level2">
 <h2 class="anchored" data-anchor-id="problem-description">Problem Description</h2>
 <p>Given <code>n</code> non-negative integers representing an elevation map where the width of each bar is <code>1</code>, compute how much water it can trap after raining.</p>
-<p><img src="https://isaac-flath.tech/TIL/Trapping Rain Water/paste-1.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/TIL/Trapping Rain Water/paste-1.png" class="img-fluid"></p>
 <section id="tests" class="level3">
 <h3 class="anchored" data-anchor-id="tests">tests</h3>
 <div class="cell" data-execution_count="1">
@@ -812,13 +812,13 @@ font-style: inherit;">return</span> vol</span>
  ]]></description>
   <category>array</category>
   <category>two pointers</category>
-  <guid>https://isaac-flath.tech/TIL/Trapping Rain Water/Trapping Rain Water.html</guid>
+  <guid>https://tefitidotai.github.io/website/TIL/Trapping Rain Water/Trapping Rain Water.html</guid>
   <pubDate>Thu, 22 Feb 2024 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Container With Most Water</title>
   <dc:creator>Isaac Flath</dc:creator>
-  <link>https://isaac-flath.tech/TIL/Container With Most Water/Container With Most Water.html</link>
+  <link>https://tefitidotai.github.io/website/TIL/Container With Most Water/Container With Most Water.html</link>
   <description><![CDATA[ 
 
 
@@ -832,7 +832,7 @@ font-style: inherit;">return</span> vol</span>
 <p>You are given an integer array <code>height</code> of length <code>n</code>. There are n vertical lines drawn such that the two endpoints of the <code>ith</code> line are <code>(i, 0)</code> and <code>(i, height[i])</code>.</p>
 <p>Find two lines that together with the x-axis form a container, such that the container contains the most water.</p>
 <p>Return the maximum amount of water a container can store.</p>
-<p><img src="https://isaac-flath.tech/TIL/Container With Most Water/paste-1.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/TIL/Container With Most Water/paste-1.png" class="img-fluid"></p>
 <p>Notice that you may not slant the container.</p>
 <section id="tests" class="level3">
 <h3 class="anchored" data-anchor-id="tests">tests</h3>
@@ -999,13 +999,13 @@ font-style: inherit;">return</span> maxV</span>
   <category>array</category>
   <category>two pointers</category>
   <category>greedy</category>
-  <guid>https://isaac-flath.tech/TIL/Container With Most Water/Container With Most Water.html</guid>
+  <guid>https://tefitidotai.github.io/website/TIL/Container With Most Water/Container With Most Water.html</guid>
   <pubDate>Wed, 21 Feb 2024 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Three Sum</title>
   <dc:creator>Isaac Flath</dc:creator>
-  <link>https://isaac-flath.tech/TIL/Three Sum.html</link>
+  <link>https://tefitidotai.github.io/website/TIL/Three Sum.html</link>
   <description><![CDATA[ 
 
 
@@ -1276,13 +1276,13 @@ font-style: inherit;">return</span> res</span>
   <category>array</category>
   <category>two pointers</category>
   <category>sorting</category>
-  <guid>https://isaac-flath.tech/TIL/Three Sum.html</guid>
+  <guid>https://tefitidotai.github.io/website/TIL/Three Sum.html</guid>
   <pubDate>Tue, 20 Feb 2024 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Two Sum II - Input Array is Sorted</title>
   <dc:creator>Isaac Flath</dc:creator>
-  <link>https://isaac-flath.tech/TIL/Two Sum II - Input Array is Sorted.html</link>
+  <link>https://tefitidotai.github.io/website/TIL/Two Sum II - Input Array is Sorted.html</link>
   <description><![CDATA[ 
 
 
@@ -1493,13 +1493,13 @@ font-style: inherit;"># if juuussstt right</span></span>
  ]]></description>
   <category>array</category>
   <category>two pointers</category>
-  <guid>https://isaac-flath.tech/TIL/Two Sum II - Input Array is Sorted.html</guid>
+  <guid>https://tefitidotai.github.io/website/TIL/Two Sum II - Input Array is Sorted.html</guid>
   <pubDate>Mon, 19 Feb 2024 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Valid Palindrome</title>
   <dc:creator>Isaac Flath</dc:creator>
-  <link>https://isaac-flath.tech/TIL/Valid Palindrome.html</link>
+  <link>https://tefitidotai.github.io/website/TIL/Valid Palindrome.html</link>
   <description><![CDATA[ 
 
 
@@ -1659,13 +1659,13 @@ font-style: inherit;">True</span></span>
  ]]></description>
   <category>two pointers</category>
   <category>string</category>
-  <guid>https://isaac-flath.tech/TIL/Valid Palindrome.html</guid>
+  <guid>https://tefitidotai.github.io/website/TIL/Valid Palindrome.html</guid>
   <pubDate>Wed, 14 Feb 2024 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Longest Consecutive Sequence</title>
   <dc:creator>Isaac Flath</dc:creator>
-  <link>https://isaac-flath.tech/TIL/Longest Consecutive Sequence.html</link>
+  <link>https://tefitidotai.github.io/website/TIL/Longest Consecutive Sequence.html</link>
   <description><![CDATA[ 
 
 
@@ -1812,13 +1812,13 @@ font-style: inherit;">return</span> max_seq_len</span></code></pre></div>
  ]]></description>
   <category>array</category>
   <category>hash table</category>
-  <guid>https://isaac-flath.tech/TIL/Longest Consecutive Sequence.html</guid>
+  <guid>https://tefitidotai.github.io/website/TIL/Longest Consecutive Sequence.html</guid>
   <pubDate>Tue, 13 Feb 2024 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Encode and Decode Strings</title>
   <dc:creator>Isaac Flath</dc:creator>
-  <link>https://isaac-flath.tech/TIL/Encode and Decode Strings.html</link>
+  <link>https://tefitidotai.github.io/website/TIL/Encode and Decode Strings.html</link>
   <description><![CDATA[ 
 
 
@@ -2079,13 +2079,13 @@ font-style: inherit;">return</span> out</span>
  ]]></description>
   <category>array</category>
   <category>string</category>
-  <guid>https://isaac-flath.tech/TIL/Encode and Decode Strings.html</guid>
+  <guid>https://tefitidotai.github.io/website/TIL/Encode and Decode Strings.html</guid>
   <pubDate>Mon, 12 Feb 2024 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Valid Sudoku</title>
   <dc:creator>Isaac Flath</dc:creator>
-  <link>https://isaac-flath.tech/TIL/Valid Sudoku/Valid Sudoku.html</link>
+  <link>https://tefitidotai.github.io/website/TIL/Valid Sudoku/Valid Sudoku.html</link>
   <description><![CDATA[ 
 
 
@@ -2107,7 +2107,7 @@ font-style: inherit;">return</span> out</span>
 <li>A Sudoku board (partially filled) could be valid but is not necessarily solvable.</li>
 <li>Only the filled cells need to be validated according to the mentioned rules.</li>
 </ul>
-<p><img src="https://isaac-flath.tech/TIL/Valid Sudoku/sodoku.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/TIL/Valid Sudoku/sodoku.png" class="img-fluid"></p>
 <pre><code>board = 
 [["5","3",".",".","7",".",".",".","."]
 ,["6",".",".","1","9","5",".",".","."]
@@ -2676,13 +2676,13 @@ font-style: inherit;">True</span></span>
   <category>array</category>
   <category>hash table</category>
   <category>matrix</category>
-  <guid>https://isaac-flath.tech/TIL/Valid Sudoku/Valid Sudoku.html</guid>
+  <guid>https://tefitidotai.github.io/website/TIL/Valid Sudoku/Valid Sudoku.html</guid>
   <pubDate>Tue, 06 Feb 2024 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Product of Array Except Self</title>
   <dc:creator>Isaac Flath</dc:creator>
-  <link>https://isaac-flath.tech/TIL/Product of Array Except Self.html</link>
+  <link>https://tefitidotai.github.io/website/TIL/Product of Array Except Self.html</link>
   <description><![CDATA[ 
 
 
@@ -2869,13 +2869,13 @@ font-style: inherit;">return</span> out</span>
  ]]></description>
   <category>array</category>
   <category>prefix sum</category>
-  <guid>https://isaac-flath.tech/TIL/Product of Array Except Self.html</guid>
+  <guid>https://tefitidotai.github.io/website/TIL/Product of Array Except Self.html</guid>
   <pubDate>Mon, 05 Feb 2024 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Top K Frequent Elements</title>
   <dc:creator>Isaac Flath</dc:creator>
-  <link>https://isaac-flath.tech/TIL/Top K Frequent Elements.html</link>
+  <link>https://tefitidotai.github.io/website/TIL/Top K Frequent Elements.html</link>
   <description><![CDATA[ 
 
 
@@ -3080,13 +3080,13 @@ font-style: inherit;">return</span> output</span>
   <category>hash table</category>
   <category>bucket sort</category>
   <category>counting</category>
-  <guid>https://isaac-flath.tech/TIL/Top K Frequent Elements.html</guid>
+  <guid>https://tefitidotai.github.io/website/TIL/Top K Frequent Elements.html</guid>
   <pubDate>Sun, 04 Feb 2024 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Grouped Anagrams</title>
   <dc:creator>Isaac Flath</dc:creator>
-  <link>https://isaac-flath.tech/TIL/Grouped Anagrams.html</link>
+  <link>https://tefitidotai.github.io/website/TIL/Grouped Anagrams.html</link>
   <description><![CDATA[ 
 
 
@@ -3248,13 +3248,13 @@ font-style: inherit;">return</span> grouped_anagrams.values()</span>
   <category>array</category>
   <category>hash table</category>
   <category>string</category>
-  <guid>https://isaac-flath.tech/TIL/Grouped Anagrams.html</guid>
+  <guid>https://tefitidotai.github.io/website/TIL/Grouped Anagrams.html</guid>
   <pubDate>Sat, 03 Feb 2024 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Valid Anagram</title>
   <dc:creator>Isaac Flath</dc:creator>
-  <link>https://isaac-flath.tech/TIL/Valid Anagram.html</link>
+  <link>https://tefitidotai.github.io/website/TIL/Valid Anagram.html</link>
   <description><![CDATA[ 
 
 
@@ -3476,13 +3476,13 @@ font-style: inherit;">list</span>(t))</span>
   <category>hash table</category>
   <category>string</category>
   <category>sorting</category>
-  <guid>https://isaac-flath.tech/TIL/Valid Anagram.html</guid>
+  <guid>https://tefitidotai.github.io/website/TIL/Valid Anagram.html</guid>
   <pubDate>Thu, 01 Feb 2024 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Contains Duplicate</title>
   <dc:creator>Isaac Flath</dc:creator>
-  <link>https://isaac-flath.tech/TIL/Contains Duplicate.html</link>
+  <link>https://tefitidotai.github.io/website/TIL/Contains Duplicate.html</link>
   <description><![CDATA[ 
 
 
@@ -3714,13 +3714,13 @@ font-style: inherit;">False</span></span>
   <category>hash table</category>
   <category>array</category>
   <category>sorting</category>
-  <guid>https://isaac-flath.tech/TIL/Contains Duplicate.html</guid>
+  <guid>https://tefitidotai.github.io/website/TIL/Contains Duplicate.html</guid>
   <pubDate>Thu, 01 Feb 2024 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Count Symmetric Integers</title>
   <dc:creator>Isaac Flath</dc:creator>
-  <link>https://isaac-flath.tech/TIL/Count Symmetric Integers.html</link>
+  <link>https://tefitidotai.github.io/website/TIL/Count Symmetric Integers.html</link>
   <description><![CDATA[ 
 
 
@@ -3969,13 +3969,13 @@ font-style: inherit;">1000</span>)</span></code></pre></div>
  ]]></description>
   <category>math</category>
   <category>enumeration</category>
-  <guid>https://isaac-flath.tech/TIL/Count Symmetric Integers.html</guid>
+  <guid>https://tefitidotai.github.io/website/TIL/Count Symmetric Integers.html</guid>
   <pubDate>Wed, 31 Jan 2024 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Pancake Sorting</title>
   <dc:creator>Isaac Flath</dc:creator>
-  <link>https://isaac-flath.tech/TIL/Pancake Sorting.html</link>
+  <link>https://tefitidotai.github.io/website/TIL/Pancake Sorting.html</link>
   <description><![CDATA[ 
 
 
@@ -4194,7 +4194,7 @@ font-style: inherit;">return</span> swap_points, arr</span>
   <category>two pointers</category>
   <category>greedy</category>
   <category>sorting</category>
-  <guid>https://isaac-flath.tech/TIL/Pancake Sorting.html</guid>
+  <guid>https://tefitidotai.github.io/website/TIL/Pancake Sorting.html</guid>
   <pubDate>Tue, 30 Jan 2024 00:00:00 GMT</pubDate>
 </item>
 </channel>
