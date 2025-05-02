@@ -1,279 +1,275 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/til.html</loc>
-    <lastmod>2025-05-02T12:58:34.714Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/til.html</loc>
+    <lastmod>2025-05-02T13:04:52.046Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/posts/NeuralNetworks/NeuralNetworkFoundationsP2.html</loc>
-    <lastmod>2025-05-02T12:58:32.018Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/posts/NeuralNetworks/NeuralNetworkFoundationsP2.html</loc>
+    <lastmod>2025-05-02T13:04:49.406Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/posts/NeuralNetworks/MixupDeepDive.html</loc>
-    <lastmod>2025-05-02T12:58:30.490Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/posts/NeuralNetworks/MixupDeepDive.html</loc>
+    <lastmod>2025-05-02T13:04:47.857Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/posts/NeuralNetworks/NLPTokenizationFoundations.html</loc>
-    <lastmod>2025-05-02T12:58:29.286Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/posts/NeuralNetworks/NLPTokenizationFoundations.html</loc>
+    <lastmod>2025-05-02T13:04:46.661Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/posts/NeuralNetworks/ChatBots.html</loc>
-    <lastmod>2025-05-02T12:58:28.114Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/posts/NeuralNetworks/ChatBots.html</loc>
+    <lastmod>2025-05-02T13:04:45.650Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/posts/Statistics/BasicTesting.html</loc>
-    <lastmod>2025-05-02T12:58:26.151Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/posts/Statistics/BasicTesting.html</loc>
+    <lastmod>2025-05-02T13:04:43.580Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/posts/GradientDescent/2020-05-09-GradientDescentforLinearRegression-P1.html</loc>
-    <lastmod>2025-05-02T12:58:24.154Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/posts/GradientDescent/2020-05-09-GradientDescentforLinearRegression-P1.html</loc>
+    <lastmod>2025-05-02T13:04:41.438Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/posts/TimeSeries/SimpleTimeSeries.html</loc>
-    <lastmod>2025-05-02T12:58:23.076Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/posts/TimeSeries/SimpleTimeSeries.html</loc>
+    <lastmod>2025-05-02T13:04:40.393Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/posts/APL/BasicStats.html</loc>
-    <lastmod>2025-05-02T12:58:21.147Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/posts/APL/BasicStats.html</loc>
+    <lastmod>2025-05-02T13:04:38.502Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/posts/APL/APLAdventOfCode2022.html</loc>
-    <lastmod>2025-05-02T12:58:19.556Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/posts/APL/APLAdventOfCode2022.html</loc>
+    <lastmod>2025-05-02T13:04:36.864Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/posts/APL/TabularData.html</loc>
-    <lastmod>2025-05-02T12:58:17.430Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/posts/APL/TabularData.html</loc>
+    <lastmod>2025-05-02T13:04:34.811Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/posts/Clustering/MeanShiftFromScratch.html</loc>
-    <lastmod>2025-05-02T12:58:16.280Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/posts/Clustering/MeanShiftFromScratch.html</loc>
+    <lastmod>2025-05-02T13:04:33.618Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/posts/Tabular/PartialDependencePlotting.html</loc>
-    <lastmod>2025-05-02T12:58:15.208Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/posts/Tabular/PartialDependencePlotting.html</loc>
+    <lastmod>2025-05-02T13:04:32.454Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/posts/Python/Python.html</loc>
-    <lastmod>2025-05-02T12:58:13.825Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/posts/Python/Python.html</loc>
+    <lastmod>2025-05-02T13:04:30.989Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/posts/GenerativeModels/GANIntroduction.html</loc>
-    <lastmod>2025-05-02T12:58:12.283Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/posts/GenerativeModels/GANIntroduction.html</loc>
+    <lastmod>2025-05-02T13:04:29.405Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/posts/GenerativeModels/CycleGanWalkThrough.html</loc>
-    <lastmod>2025-05-02T12:58:11.178Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/posts/GenerativeModels/CycleGanWalkThrough.html</loc>
+    <lastmod>2025-05-02T13:04:28.345Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/posts/Other/QuartoDocumentsBestPractices.html</loc>
-    <lastmod>2025-05-02T12:58:09.667Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/posts/Other/QuartoDocumentsBestPractices.html</loc>
+    <lastmod>2025-05-02T13:04:26.847Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/posts/Other/MarketingAttribution.html</loc>
-    <lastmod>2025-05-02T12:58:08.290Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/posts/Other/MarketingAttribution.html</loc>
+    <lastmod>2025-05-02T13:04:25.442Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/TIL/Valid Parentheses.html</loc>
-    <lastmod>2025-05-02T12:58:05.474Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/TIL/DelayedRedirect.html</loc>
+    <lastmod>2025-05-02T13:04:22.728Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/TIL/Two Sum.html</loc>
-    <lastmod>2025-05-02T12:58:04.344Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/TIL/ShelveDB.html</loc>
+    <lastmod>2025-05-02T13:04:21.454Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/TIL/QuartoDrafts.html</loc>
-    <lastmod>2025-05-02T12:58:03.243Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/TIL/PythonScriptGithubActions.html</loc>
+    <lastmod>2025-05-02T13:04:20.348Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/TIL/Count Symmetric Integers.html</loc>
-    <lastmod>2025-05-02T12:58:02.121Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/TIL/Three Sum.html</loc>
+    <lastmod>2025-05-02T13:04:19.577Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/TIL/Contains Duplicate.html</loc>
-    <lastmod>2025-05-02T12:58:01.049Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/TIL/SecretsForGithubActions.html</loc>
+    <lastmod>2025-05-02T13:04:18.064Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/TIL/Valid Anagram.html</loc>
-    <lastmod>2025-05-02T12:57:59.435Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/TIL/Evaluate Reverse Polish Notation.html</loc>
+    <lastmod>2025-05-02T13:04:16.936Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/TIL/Valid Palindrome.html</loc>
-    <lastmod>2025-05-02T12:57:57.789Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/TIL/Min Stack.html</loc>
+    <lastmod>2025-05-02T13:04:15.351Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/TIL/NbdevNonLibExports.html</loc>
-    <lastmod>2025-05-02T12:57:56.246Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/TIL/Top K Frequent Elements.html</loc>
+    <lastmod>2025-05-02T13:04:13.720Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/TIL/Valid Sudoku/Valid Sudoku.html</loc>
-    <lastmod>2025-05-02T12:57:55.154Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/TIL/Two Sum II - Input Array is Sorted.html</loc>
+    <lastmod>2025-05-02T13:04:12.616Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/TIL/QuartoConditionalContent.html</loc>
-    <lastmod>2025-05-02T12:57:53.960Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/TIL/QuartoColumnFormatting.html</loc>
+    <lastmod>2025-05-02T13:04:10.966Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/TIL/Longest Consecutive Sequence.html</loc>
-    <lastmod>2025-05-02T12:57:53.279Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/TIL/RandomSeedDuplication.html</loc>
+    <lastmod>2025-05-02T13:04:10.310Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/TIL/Product of Array Except Self.html</loc>
-    <lastmod>2025-05-02T12:57:51.725Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/TIL/Encode and Decode Strings.html</loc>
+    <lastmod>2025-05-02T13:04:09.222Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/TIL/Container With Most Water/Container With Most Water.html</loc>
-    <lastmod>2025-05-02T12:57:50.138Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/TIL/Palindrome Number.html</loc>
+    <lastmod>2025-05-02T13:04:07.646Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/TIL/Pancake Sorting.html</loc>
-    <lastmod>2025-05-02T12:57:49.012Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/TIL/JupyterIsJson.html</loc>
+    <lastmod>2025-05-02T13:04:06.047Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/TIL/ConnectingJupyterEC2.html</loc>
-    <lastmod>2025-05-02T12:57:47.891Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/TIL/YoutubeTerminalDownload.html</loc>
+    <lastmod>2025-05-02T13:04:04.928Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/TIL/Grouped Anagrams.html</loc>
-    <lastmod>2025-05-02T12:57:46.657Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/TIL/Trapping Rain Water/Trapping Rain Water.html</loc>
+    <lastmod>2025-05-02T13:04:04.282Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/blog.html</loc>
-    <lastmod>2025-05-02T12:57:44.394Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/testimonials.html</loc>
+    <lastmod>2025-05-02T13:04:01.960Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/testimonials.html</loc>
-    <lastmod>2025-05-02T12:57:45.367Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/blog.html</loc>
+    <lastmod>2025-05-02T13:04:00.953Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/TIL/Trapping Rain Water/Trapping Rain Water.html</loc>
-    <lastmod>2025-05-02T12:57:47.442Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/TIL/Grouped Anagrams.html</loc>
+    <lastmod>2025-05-02T13:04:03.396Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/TIL/YoutubeTerminalDownload.html</loc>
-    <lastmod>2025-05-02T12:57:48.215Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/TIL/ConnectingJupyterEC2.html</loc>
+    <lastmod>2025-05-02T13:04:04.605Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/TIL/JupyterIsJson.html</loc>
-    <lastmod>2025-05-02T12:57:49.335Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/TIL/Pancake Sorting.html</loc>
+    <lastmod>2025-05-02T13:04:05.715Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/TIL/Palindrome Number.html</loc>
-    <lastmod>2025-05-02T12:57:50.978Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/TIL/Container With Most Water/Container With Most Water.html</loc>
+    <lastmod>2025-05-02T13:04:06.837Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/TIL/Encode and Decode Strings.html</loc>
-    <lastmod>2025-05-02T12:57:52.506Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/TIL/Product of Array Except Self.html</loc>
+    <lastmod>2025-05-02T13:04:08.385Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/TIL/RandomSeedDuplication.html</loc>
-    <lastmod>2025-05-02T12:57:53.588Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/TIL/Longest Consecutive Sequence.html</loc>
+    <lastmod>2025-05-02T13:04:09.967Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/TIL/QuartoColumnFormatting.html</loc>
-    <lastmod>2025-05-02T12:57:54.285Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/TIL/QuartoConditionalContent.html</loc>
+    <lastmod>2025-05-02T13:04:10.661Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/TIL/Two Sum II - Input Array is Sorted.html</loc>
-    <lastmod>2025-05-02T12:57:55.933Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/TIL/Valid Sudoku/Valid Sudoku.html</loc>
+    <lastmod>2025-05-02T13:04:11.827Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/TIL/Top K Frequent Elements.html</loc>
-    <lastmod>2025-05-02T12:57:56.995Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/TIL/NbdevNonLibExports.html</loc>
+    <lastmod>2025-05-02T13:04:12.928Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/TIL/Min Stack.html</loc>
-    <lastmod>2025-05-02T12:57:58.621Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/TIL/Valid Palindrome.html</loc>
+    <lastmod>2025-05-02T13:04:14.600Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/TIL/Evaluate Reverse Polish Notation.html</loc>
-    <lastmod>2025-05-02T12:58:00.187Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/TIL/Valid Anagram.html</loc>
+    <lastmod>2025-05-02T13:04:16.171Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/TIL/SecretsForGithubActions.html</loc>
-    <lastmod>2025-05-02T12:58:01.389Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/TIL/Contains Duplicate.html</loc>
+    <lastmod>2025-05-02T13:04:17.715Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/TIL/Three Sum.html</loc>
-    <lastmod>2025-05-02T12:58:02.878Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/TIL/Count Symmetric Integers.html</loc>
+    <lastmod>2025-05-02T13:04:18.807Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/TIL/PythonScriptGithubActions.html</loc>
-    <lastmod>2025-05-02T12:58:03.598Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/TIL/QuartoDrafts.html</loc>
+    <lastmod>2025-05-02T13:04:19.996Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/TIL/ShelveDB.html</loc>
-    <lastmod>2025-05-02T12:58:04.699Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/TIL/Two Sum.html</loc>
+    <lastmod>2025-05-02T13:04:21.106Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/TIL/DelayedRedirect.html</loc>
-    <lastmod>2025-05-02T12:58:05.782Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/TIL/Valid Parentheses.html</loc>
+    <lastmod>2025-05-02T13:04:22.270Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/index.html</loc>
-    <lastmod>2025-05-02T12:58:06.649Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/posts/Other/MultiArmedBandits.html</loc>
+    <lastmod>2025-05-02T13:04:26.345Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/posts/Other/MultiArmedBandits.html</loc>
-    <lastmod>2025-05-02T12:58:09.150Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/posts/Other/QuartoBlogSubscriptions.html</loc>
+    <lastmod>2025-05-02T13:04:27.440Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/posts/Other/QuartoBlogSubscriptions.html</loc>
-    <lastmod>2025-05-02T12:58:10.288Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/posts/GenerativeModels/StyleGanComponents.html</loc>
+    <lastmod>2025-05-02T13:04:28.954Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/posts/GenerativeModels/StyleGanComponents.html</loc>
-    <lastmod>2025-05-02T12:58:11.843Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/posts/Python/PythonConcurrency.html</loc>
+    <lastmod>2025-05-02T13:04:30.054Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/posts/Python/PythonConcurrency.html</loc>
-    <lastmod>2025-05-02T12:58:12.939Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/posts/Tabular/TabularModeling.html</loc>
+    <lastmod>2025-05-02T13:04:31.691Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/posts/Tabular/TabularModeling.html</loc>
-    <lastmod>2025-05-02T12:58:14.485Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/posts/Clustering/KMeansFromScratch.html</loc>
+    <lastmod>2025-05-02T13:04:32.953Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/posts/Clustering/KMeansFromScratch.html</loc>
-    <lastmod>2025-05-02T12:58:15.664Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/posts/APL/Fastai_Numerical_Linear_Algebra_1.html</loc>
+    <lastmod>2025-05-02T13:04:35.959Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/posts/APL/Fastai_Numerical_Linear_Algebra_1.html</loc>
-    <lastmod>2025-05-02T12:58:18.673Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/posts/APL/MatrixMultiplication.html</loc>
+    <lastmod>2025-05-02T13:04:37.626Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/posts/APL/MatrixMultiplication.html</loc>
-    <lastmod>2025-05-02T12:58:20.312Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/posts/boots/FasthtmlTutorial.html</loc>
+    <lastmod>2025-05-02T13:04:39.161Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/posts/boots/FasthtmlTutorial.html</loc>
-    <lastmod>2025-05-02T12:58:21.741Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/posts/GradientDescent/2020-06-11-GradientDescentforLinearRegression-P2.html</loc>
+    <lastmod>2025-05-02T13:04:41.047Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/posts/GradientDescent/2020-06-11-GradientDescentforLinearRegression-P2.html</loc>
-    <lastmod>2025-05-02T12:58:23.705Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/posts/GradientDescent/2020-06-01-GradientDescentforLinearRegression-P1B.html</loc>
+    <lastmod>2025-05-02T13:04:41.980Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/posts/GradientDescent/2020-06-01-GradientDescentforLinearRegression-P1B.html</loc>
-    <lastmod>2025-05-02T12:58:24.592Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/posts/NeuralNetworks/RNNFoundations.html</loc>
+    <lastmod>2025-05-02T13:04:45.337Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/posts/NeuralNetworks/RNNFoundations.html</loc>
-    <lastmod>2025-05-02T12:58:27.722Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/posts/NeuralNetworks/NeuralNetworksXOR.html</loc>
+    <lastmod>2025-05-02T13:04:46.164Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/posts/NeuralNetworks/NeuralNetworksXOR.html</loc>
-    <lastmod>2025-05-02T12:58:28.721Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/posts/NeuralNetworks/PseudoLabelingDataCleaning.html</loc>
+    <lastmod>2025-05-02T13:04:47.386Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/posts/NeuralNetworks/PseudoLabelingDataCleaning.html</loc>
-    <lastmod>2025-05-02T12:58:29.973Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/posts/NeuralNetworks/PlantPathologyKaggle.html</loc>
+    <lastmod>2025-05-02T13:04:48.788Z</lastmod>
   </url>
   <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/posts/NeuralNetworks/PlantPathologyKaggle.html</loc>
-    <lastmod>2025-05-02T12:58:31.407Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tefitidotai.github.io/website/blog.html/posts/NeuralNetworks/NeuralNetworkFoundationsP1.html</loc>
-    <lastmod>2025-05-02T12:58:33.206Z</lastmod>
+    <loc>https://tefitidotai.github.io/website/posts/NeuralNetworks/NeuralNetworkFoundationsP1.html</loc>
+    <lastmod>2025-05-02T13:04:50.568Z</lastmod>
   </url>
 </urlset>
