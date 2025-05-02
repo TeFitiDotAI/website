@@ -5,7 +5,7 @@ execute:
   freeze: true
 website:
   google-analytics: "G-XNZGT59XWP"
-  title: "Isaac Flath"
+  title: "Te Fiti"
   favicon: favicon/tefiti-32x32.png
   open-graph:
     locale: en_US
@@ -17,14 +17,10 @@ website:
   description: "Blog for machine learning, programming, computer science and other data science related topics"
   navbar:
     right:
-      #- text: "About Me"
-       # file: index.qmd
+      
       - text: "Blog"
         file: blog.qmd
-      #- text: "TIL"
-      #  file: til.qmd
-      #- text: "Testimonials"
-      #  file: testimonials.ipynb
+      
   page-footer: 
     left: "Te Fiti" 
     right: 
