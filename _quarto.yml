@@ -6,37 +6,37 @@ execute:
 website:
   google-analytics: "G-XNZGT59XWP"
   title: "Isaac Flath"
-  favicon: favicon/favicon-32x32.png
+  favicon: favicon/tefiti-32x32.png
   open-graph:
     locale: en_US
   twitter-card:
     image: street.jpg
     card-style: summary
-    creator: "@isaac_flath"
+    creator: "@tefiti"
   site-url: https://isaac-flath.tech/
   description: "Blog for machine learning, programming, computer science and other data science related topics"
   navbar:
     right:
-      - text: "About Me"
-        file: index.qmd
+      #- text: "About Me"
+       # file: index.qmd
       - text: "Blog"
         file: blog.qmd
-      - text: "TIL"
-        file: til.qmd
-      - text: "Testimonials"
-        file: testimonials.ipynb
+      #- text: "TIL"
+      #  file: til.qmd
+      #- text: "Testimonials"
+      #  file: testimonials.ipynb
   page-footer: 
-    left: "Isaac Flath" 
+    left: "Te Fiti" 
     right: 
       - icon: linkedin
         text: LinkedIn
-        href: https://linkedin.com/in/isaacflath/
+        href: "#"
       - icon: github
         text: Github
-        href: https://github.com/isaac-flath
+        href: "#"
       - icon: twitter
         text: Twitter
-        href: https://twitter.com/isaac_flath
+        href: "#"
       - icon: rss
         text: Blog RSS
         href: blog.xml
