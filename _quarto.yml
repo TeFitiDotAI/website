@@ -17,7 +17,7 @@ website:
   description: "Blog for machine learning, programming, computer science and other data science related topics"
   navbar:
     right:
-      - text: "Blog"
+      - text: "Home"
         file: blog.qmd
 home: blog.qmd
 page-footer: 
