@@ -6,15 +6,15 @@
       version="2.0">
 <channel>
 <title>Te Fiti</title>
-<link>https://isaac-flath.tech/blog.html</link>
-<atom:link href="https://isaac-flath.tech/blog.xml" rel="self" type="application/rss+xml"/>
+<link>https://tefitidotai.github.io/website/blog.html</link>
+<atom:link href="https://tefitidotai.github.io/website/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Blog for machine learning, programming, computer science and other data science related topics</description>
 <generator>quarto-1.3.450</generator>
 <lastBuildDate>Fri, 19 Jul 2024 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Creating Custom FastHTML Tags for Markdown Rendering</title>
   <dc:creator>Isaac Flath</dc:creator>
-  <link>https://isaac-flath.tech/posts/boots/FasthtmlTutorial.html</link>
+  <link>https://tefitidotai.github.io/website/posts/boots/FasthtmlTutorial.html</link>
   <description><![CDATA[ 
 
 
@@ -249,7 +249,7 @@ font-style: inherit;">"https://cdn.jsdelivr.net/npm/zero-md@3?register"</span>)]
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://isaac-flath.tech/posts/boots/Rendered_Content.png" class="img-fluid figure-img"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/boots/Rendered_Content.png" class="img-fluid figure-img"></p>
 <figcaption class="figure-caption">image</figcaption>
 </figure>
 </div>
@@ -471,7 +471,7 @@ font-style: inherit;">=</span>render_local_md))</span></code></pre></div>
 <div id="tabset-2-1" class="tab-pane active" aria-labelledby="tabset-2-1-tab">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://isaac-flath.tech/posts/boots/Rendered_Bubble_BadFormat.png" class="img-fluid figure-img"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/boots/Rendered_Bubble_BadFormat.png" class="img-fluid figure-img"></p>
 <figcaption class="figure-caption">image</figcaption>
 </figure>
 </div>
@@ -585,7 +585,7 @@ font-style: inherit;">=</span>_render_local_md))</span></code></pre></div>
 <ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" aria-controls="tabset-3-1" aria-selected="true">rendered</a></li><li class="nav-item"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" aria-controls="tabset-3-2" aria-selected="false">python</a></li><li class="nav-item"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" aria-controls="tabset-3-3" aria-selected="false">html</a></li></ul>
 <div class="tab-content">
 <div id="tabset-3-1" class="tab-pane active" aria-labelledby="tabset-3-1-tab">
-<p><img src="https://isaac-flath.tech/posts/boots/Rendered_Bubble.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/boots/Rendered_Bubble.png" class="img-fluid"></p>
 </div>
 <div id="tabset-3-2" class="tab-pane" aria-labelledby="tabset-3-2-tab">
 <div class="cell" data-execution_count="15">
@@ -740,7 +740,7 @@ font-style: inherit;">"row"</span>))</span></code></pre></div>
 <div id="tabset-4-1" class="tab-pane active" aria-labelledby="tabset-4-1-tab">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://isaac-flath.tech/posts/boots/Completed_example.png" class="img-fluid figure-img"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/boots/Completed_example.png" class="img-fluid figure-img"></p>
 <figcaption class="figure-caption">image</figcaption>
 </figure>
 </div>
@@ -950,15 +950,15 @@ Reflect on the print functions we usually use in Python. Does anything in that l
   <category>FastHTML</category>
   <category>htmx</category>
   <category>boots</category>
-  <guid>https://isaac-flath.tech/posts/boots/FasthtmlTutorial.html</guid>
+  <guid>https://tefitidotai.github.io/website/posts/boots/FasthtmlTutorial.html</guid>
   <pubDate>Fri, 19 Jul 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://isaac-flath.tech/posts/_TopicImages/FastHtml.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://tefitidotai.github.io/website/posts/_TopicImages/FastHtml.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Adding Subscriptions to a Quarto Blog</title>
   <dc:creator>Salman Naqvi</dc:creator>
   <dc:creator>Isaac Flath</dc:creator>
-  <link>https://isaac-flath.tech/posts/Other/QuartoBlogSubscriptions.html</link>
+  <link>https://tefitidotai.github.io/website/posts/Other/QuartoBlogSubscriptions.html</link>
   <description><![CDATA[ 
 
 
@@ -987,16 +987,16 @@ Reflect on the print functions we usually use in Python. Does anything in that l
 <section id="mailerlite-campaign-setup" class="level3" data-number="0.2">
 <h3 data-number="0.2" class="anchored" data-anchor-id="mailerlite-campaign-setup"><span class="header-section-number">0.2</span> MailerLite Campaign Setup</h3>
 <p><a href="https://www.mailerlite.com/signup">Create a MailerLite account</a></p>
-<p><img src="https://isaac-flath.tech/posts/Other/images/MailerLite1_signup.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/Other/images/MailerLite1_signup.png" class="img-fluid"></p>
 <p>Once you have an account and are logged in, <a href="https://dashboard.mailerlite.com/campaigns/create">create an RSS Campaign</a>.</p>
-<p><img src="https://isaac-flath.tech/posts/Other/images/MailerLite2_NewCampaign.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/Other/images/MailerLite2_NewCampaign.png" class="img-fluid"></p>
 <p>As you complete the Campaign creation process there are a few key options to look out for.</p>
 <p>As you progress through the signup form you will need to fill in some information and, including the URL of your RSS feed. It should be a URL that ends with <code>.xml</code>.</p>
-<p><img src="https://isaac-flath.tech/posts/Other/images/MailerLite3_RssFeedUrl.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/Other/images/MailerLite3_RssFeedUrl.png" class="img-fluid"></p>
 <p>I recommend setting the email to only be sent when you have new blog posts. This ensures that an email is only sent if you’ve published a new post. Otherwise, an email is sent on a regular interval with the latest posts regardless of whether there is new content.</p>
-<p><img src="https://isaac-flath.tech/posts/Other/images/MailerLite4_NewPostsOnly.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/Other/images/MailerLite4_NewPostsOnly.png" class="img-fluid"></p>
 <p>On the content page, choose start from scratch (free tier) or select a template (paid) and design your email that will go out.</p>
-<p><img src="https://isaac-flath.tech/posts/Other/images/MailerLite5_EmailDesign.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/Other/images/MailerLite5_EmailDesign.png" class="img-fluid"></p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1011,7 +1011,7 @@ Important
 </div>
 </div>
 <p>Select All Active Subscribers to send to.</p>
-<p><img src="https://isaac-flath.tech/posts/Other/images/MailerLite6_CampaignRecipients.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/Other/images/MailerLite6_CampaignRecipients.png" class="img-fluid"></p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1023,19 +1023,19 @@ Advanced Subscriber Settings
 </div>
 <div class="callout-body-container callout-body">
 <p>You can create individual subscriber groups to have different campaigns go to different groups to give subscribers more options. <a href="https://isaac-flath.tech/blog.html">Example here</a>.</p>
-<p><img src="https://isaac-flath.tech/posts/Other/images/MailerLite7_Groups.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/Other/images/MailerLite7_Groups.png" class="img-fluid"></p>
 </div>
 </div>
 <p>Continue through to schedule your campaign!</p>
-<p><img src="https://isaac-flath.tech/posts/Other/images/MailerLite8_Schedule.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/Other/images/MailerLite8_Schedule.png" class="img-fluid"></p>
 </section>
 <section id="create-subscribe.html" class="level3" data-number="0.3">
 <h3 data-number="0.3" class="anchored" data-anchor-id="create-subscribe.html"><span class="header-section-number">0.3</span> Create subscribe.html</h3>
 <p>Now that the campaign is set up and will go out to all subscribers, we need to create the widget that allows users to subscribe to the blog. In other words we need a way for users to sign up! In Quarto, this is defined in the <code>subscribe.html</code> file. First, we need to use MailerLite to create the contents.</p>
 <p>In MailerLite this is called an <code>embedded form</code>. We can use their GUI to <a href="https://dashboard.mailerlite.com/forms/create?type=embedded">Create an embedded form</a>.</p>
-<p><img src="https://isaac-flath.tech/posts/Other/images/MailerLite9_NewForm.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/Other/images/MailerLite9_NewForm.png" class="img-fluid"></p>
 <p>Once we start the form we can use the GUI form editor to design what we want the form to look like.</p>
-<p><img src="https://isaac-flath.tech/posts/Other/images/MailerLite11_FormDesign.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/Other/images/MailerLite11_FormDesign.png" class="img-fluid"></p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1050,7 +1050,7 @@ Tip
 </div>
 </div>
 <p>Once you created the form it will take you to that forms <code>Overview</code> page. Scroll down to look for the <code>Embed form into your website</code> section. In that section select <code>HTML Code</code> and copy the code provided.</p>
-<p><img src="https://isaac-flath.tech/posts/Other/images/MailerLite12_FormHtml.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/Other/images/MailerLite12_FormHtml.png" class="img-fluid"></p>
 <p>Paste this code into a <code>subscribe.html</code> file at the top level of your blog’s directory.</p>
 </section>
 <section id="modify-_quarto.yml" class="level3" data-number="0.4">
@@ -1090,10 +1090,10 @@ font-style: inherit;"> subscribe.html</span></span></code></pre></div>
 <section id="step-1-create-the-form." class="level3" data-number="0.7">
 <h3 data-number="0.7" class="anchored" data-anchor-id="step-1-create-the-form."><span class="header-section-number">0.7</span> Step 1: Create the form.</h3>
 <p>Using your online form provider of choice, create your form! A simple form would include a text box for inputting an email, with a simple check to see if the entered email is valid.</p>
-<p><img src="https://isaac-flath.tech/posts/Other/images/1.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/Other/images/1.png" class="img-fluid"></p>
 <p>On Google Forms, you have an option to implement email checking with the following option.</p>
-<p><img src="https://isaac-flath.tech/posts/Other/images/2.png" class="img-fluid"></p>
-<p><img src="https://isaac-flath.tech/posts/Other/images/3.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/Other/images/2.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/Other/images/3.png" class="img-fluid"></p>
 <div class="callout callout-style-simple callout-note">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1110,17 +1110,17 @@ font-style: inherit;"> subscribe.html</span></span></code></pre></div>
 <h3 data-number="0.8" class="anchored" data-anchor-id="step-2-obtain-the-embed-snippet."><span class="header-section-number">0.8</span> Step 2: Obtain the embed snippet.</h3>
 <p>Obtain the HTML snippet which you can paste into your website’s source.</p>
 <p>To do this, press send…</p>
-<p><img src="https://isaac-flath.tech/posts/Other/images/4.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/Other/images/4.png" class="img-fluid"></p>
 <p>…go to the embed tab…</p>
-<p><img src="https://isaac-flath.tech/posts/Other/images/5.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/Other/images/5.png" class="img-fluid"></p>
 <p>…and copy the snippet.</p>
 </section>
 <section id="step-3-embed-the-embed" class="level3" data-number="0.9">
 <h3 data-number="0.9" class="anchored" data-anchor-id="step-3-embed-the-embed"><span class="header-section-number">0.9</span> Step 3: Embed the embed</h3>
 <p>Paste the snippet wherever you want to put the form on your site!</p>
-<p><img src="https://isaac-flath.tech/posts/Other/images/6.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/Other/images/6.png" class="img-fluid"></p>
 <p>You can adjust the size of the embed by tweaking these values.</p>
-<p><img src="https://isaac-flath.tech/posts/Other/images/7.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/Other/images/7.png" class="img-fluid"></p>
 </section>
 <section id="step-4-unsubscribing." class="level3" data-number="0.10">
 <h3 data-number="0.10" class="anchored" data-anchor-id="step-4-unsubscribing."><span class="header-section-number">0.10</span> Step 4: Unsubscribing.</h3>
@@ -1129,13 +1129,13 @@ font-style: inherit;"> subscribe.html</span></span></code></pre></div>
 <section id="step-5-gathering-emails." class="level3" data-number="0.11">
 <h3 data-number="0.11" class="anchored" data-anchor-id="step-5-gathering-emails."><span class="header-section-number">0.11</span> Step 5: Gathering emails.</h3>
 <p>Head to the responses tab of your form.</p>
-<p><img src="https://isaac-flath.tech/posts/Other/images/8.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/Other/images/8.png" class="img-fluid"></p>
 <p>You can take these email addresses and create a mailing list in the email service of your choice.</p>
 <p>You can also download a CSV file containing the responses.</p>
-<p><img src="https://isaac-flath.tech/posts/Other/images/9.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/Other/images/9.png" class="img-fluid"></p>
 <p>Alternatively, you can also create a spreadsheet by clicking on the spreadsheet icon.</p>
-<p><img src="https://isaac-flath.tech/posts/Other/images/10.png" class="img-fluid"></p>
-<p><img src="https://isaac-flath.tech/posts/Other/images/11.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/Other/images/10.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/Other/images/11.png" class="img-fluid"></p>
 <p><strong>At the same time,</strong> check the responses in your unsubscribe form and tally them against the responses received in your subscribe form. Remove any email addresses that need to be removed.</p>
 </section>
 <section id="step-6-compose-and-send" class="level3" data-number="0.12">
@@ -1192,14 +1192,14 @@ Before you hit that send button!
 
  ]]></description>
   <category>Quarto</category>
-  <guid>https://isaac-flath.tech/posts/Other/QuartoBlogSubscriptions.html</guid>
+  <guid>https://tefitidotai.github.io/website/posts/Other/QuartoBlogSubscriptions.html</guid>
   <pubDate>Fri, 23 Dec 2022 00:00:00 GMT</pubDate>
-  <media:content url="https://isaac-flath.tech/posts/_TopicImages/Quarto.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://tefitidotai.github.io/website/posts/_TopicImages/Quarto.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Advent of Code APL 2022</title>
   <dc:creator>Isaac Flath</dc:creator>
-  <link>https://isaac-flath.tech/posts/APL/APLAdventOfCode2022.html</link>
+  <link>https://tefitidotai.github.io/website/posts/APL/APLAdventOfCode2022.html</link>
   <description><![CDATA[ 
 
 
@@ -1623,14 +1623,14 @@ part1 part2 ← {¯1+⍵+⍵⍳⍨≢¨⍵∪/f}¨ 4 14</code></pre>
  ]]></description>
   <category>APL</category>
   <category>Advent of Code</category>
-  <guid>https://isaac-flath.tech/posts/APL/APLAdventOfCode2022.html</guid>
+  <guid>https://tefitidotai.github.io/website/posts/APL/APLAdventOfCode2022.html</guid>
   <pubDate>Fri, 02 Dec 2022 00:00:00 GMT</pubDate>
-  <media:content url="https://isaac-flath.tech/posts/_TopicImages/APL.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://tefitidotai.github.io/website/posts/_TopicImages/APL.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Quarto Document Best Practices</title>
   <dc:creator>Isaac Flath</dc:creator>
-  <link>https://isaac-flath.tech/posts/Other/QuartoDocumentsBestPractices.html</link>
+  <link>https://tefitidotai.github.io/website/posts/Other/QuartoDocumentsBestPractices.html</link>
   <description><![CDATA[ 
 
 
@@ -1843,14 +1843,14 @@ Tip
 
  ]]></description>
   <category>Quarto</category>
-  <guid>https://isaac-flath.tech/posts/Other/QuartoDocumentsBestPractices.html</guid>
+  <guid>https://tefitidotai.github.io/website/posts/Other/QuartoDocumentsBestPractices.html</guid>
   <pubDate>Fri, 11 Nov 2022 00:00:00 GMT</pubDate>
-  <media:content url="https://isaac-flath.tech/posts/_TopicImages/Quarto.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://tefitidotai.github.io/website/posts/_TopicImages/Quarto.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>MeanShift From Scratch</title>
   <dc:creator>Isaac Flath</dc:creator>
-  <link>https://isaac-flath.tech/posts/Clustering/MeanShiftFromScratch.html</link>
+  <link>https://tefitidotai.github.io/website/posts/Clustering/MeanShiftFromScratch.html</link>
   <description><![CDATA[ 
 
 
@@ -2110,7 +2110,7 @@ font-style: inherit;">=</span> create_dataset(n_clusters,n_samples)</span></code
 <div class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1">plot_data(centroids, data, n_samples)</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://isaac-flath.tech/posts/Clustering/MeanShiftFromScratch_files/figure-html/cell-8-output-1.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/Clustering/MeanShiftFromScratch_files/figure-html/cell-8-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 </section>
@@ -2257,7 +2257,7 @@ font-style: inherit;">100</span>)</span>
 background-color: null;
 font-style: inherit;">;</span> plt.show()</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://isaac-flath.tech/posts/Clustering/MeanShiftFromScratch_files/figure-html/cell-11-output-1.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/Clustering/MeanShiftFromScratch_files/figure-html/cell-11-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <p>We modify the above slightly by adding a parameter called the bandwidth. By adjusting the bandwidth we can adjust how fast or slow the weights decay as the distance increases. A Gaussian with a bandwidth of 1 (middle chart) is just the normal distribution we saw above.</p>
@@ -2357,7 +2357,7 @@ background-color: null;
 font-style: inherit;">'Weight'</span>)</span>
 <span id="cb12-7">plt.show()</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://isaac-flath.tech/posts/Clustering/MeanShiftFromScratch_files/figure-html/cell-13-output-1.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/Clustering/MeanShiftFromScratch_files/figure-html/cell-13-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 </section>
@@ -2602,7 +2602,7 @@ font-style: inherit;">True</span>)</span></code></pre></div>
 Algorithm found 6 Centroids in 9 epochs</code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://isaac-flath.tech/posts/Clustering/MeanShiftFromScratch_files/figure-html/cell-19-output-2.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/Clustering/MeanShiftFromScratch_files/figure-html/cell-19-output-2.png" class="img-fluid"></p>
 </div>
 </div>
 </section>
@@ -2677,7 +2677,7 @@ font-style: inherit;">True</span>)</span></code></pre></div>
 Algorithm found 6 Centroids in 9 epochs</code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://isaac-flath.tech/posts/Clustering/MeanShiftFromScratch_files/figure-html/cell-22-output-2.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/Clustering/MeanShiftFromScratch_files/figure-html/cell-22-output-2.png" class="img-fluid"></p>
 </div>
 </div>
 </section>
@@ -2714,7 +2714,7 @@ font-style: inherit;">300</span>)])</span></code></pre></div>
 Algorithm found 6 Centroids in 9 epochs</code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://isaac-flath.tech/posts/Clustering/MeanShiftFromScratch_files/figure-html/cell-23-output-2.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/Clustering/MeanShiftFromScratch_files/figure-html/cell-23-output-2.png" class="img-fluid"></p>
 </div>
 </div>
 
@@ -2724,14 +2724,14 @@ Algorithm found 6 Centroids in 9 epochs</code></pre>
 
  ]]></description>
   <category>Clustering</category>
-  <guid>https://isaac-flath.tech/posts/Clustering/MeanShiftFromScratch.html</guid>
+  <guid>https://tefitidotai.github.io/website/posts/Clustering/MeanShiftFromScratch.html</guid>
   <pubDate>Thu, 10 Nov 2022 00:00:00 GMT</pubDate>
-  <media:content url="https://isaac-flath.tech/posts/_TopicImages/clustering.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://tefitidotai.github.io/website/posts/_TopicImages/clustering.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Python Programming Tips</title>
   <dc:creator>Isaac Flath</dc:creator>
-  <link>https://isaac-flath.tech/posts/Python/Python.html</link>
+  <link>https://tefitidotai.github.io/website/posts/Python/Python.html</link>
   <description><![CDATA[ 
 
 
@@ -5000,14 +5000,14 @@ b'ed ninety nine\n'
  ]]></description>
   <category>Python</category>
   <category>Programming</category>
-  <guid>https://isaac-flath.tech/posts/Python/Python.html</guid>
+  <guid>https://tefitidotai.github.io/website/posts/Python/Python.html</guid>
   <pubDate>Sun, 06 Nov 2022 00:00:00 GMT</pubDate>
-  <media:content url="https://isaac-flath.tech/posts/_TopicImages/python.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://tefitidotai.github.io/website/posts/_TopicImages/python.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>K-Means From Scratch</title>
   <dc:creator>Isaac Flath</dc:creator>
-  <link>https://isaac-flath.tech/posts/Clustering/KMeansFromScratch.html</link>
+  <link>https://tefitidotai.github.io/website/posts/Clustering/KMeansFromScratch.html</link>
   <description><![CDATA[ 
 
 
@@ -5235,7 +5235,7 @@ font-style: inherit;">in</span> centroids])</span></code></pre></div>
 <div class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1">plot_data(centroids, data, n_samples)</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://isaac-flath.tech/posts/Clustering/KMeansFromScratch_files/figure-html/cell-8-output-1.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/Clustering/KMeansFromScratch_files/figure-html/cell-8-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 </section>
@@ -5481,13 +5481,13 @@ font-style: inherit;">=</span> assign_centroids(pred_centroids,data)</span>
 background-color: null;
 font-style: inherit;">=</span> update_centroids(centroid_assignments,data)</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://isaac-flath.tech/posts/Clustering/KMeansFromScratch_files/figure-html/cell-13-output-1.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/Clustering/KMeansFromScratch_files/figure-html/cell-13-output-1.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://isaac-flath.tech/posts/Clustering/KMeansFromScratch_files/figure-html/cell-13-output-2.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/Clustering/KMeansFromScratch_files/figure-html/cell-13-output-2.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://isaac-flath.tech/posts/Clustering/KMeansFromScratch_files/figure-html/cell-13-output-3.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/Clustering/KMeansFromScratch_files/figure-html/cell-13-output-3.png" class="img-fluid"></p>
 </div>
 </div>
 
@@ -5496,14 +5496,14 @@ font-style: inherit;">=</span> update_centroids(centroid_assignments,data)</span
 
  ]]></description>
   <category>Clustering</category>
-  <guid>https://isaac-flath.tech/posts/Clustering/KMeansFromScratch.html</guid>
+  <guid>https://tefitidotai.github.io/website/posts/Clustering/KMeansFromScratch.html</guid>
   <pubDate>Sat, 05 Nov 2022 00:00:00 GMT</pubDate>
-  <media:content url="https://isaac-flath.tech/posts/_TopicImages/clustering.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://tefitidotai.github.io/website/posts/_TopicImages/clustering.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Introduction To Statistical Testing</title>
   <dc:creator>Isaac Flath</dc:creator>
-  <link>https://isaac-flath.tech/posts/Statistics/BasicTesting.html</link>
+  <link>https://tefitidotai.github.io/website/posts/Statistics/BasicTesting.html</link>
   <description><![CDATA[ 
 
 
@@ -7721,7 +7721,7 @@ background-color: null;
 font-style: inherit;">'upper left'</span>) </span>
 <span id="cb47-22">plt.show()</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://isaac-flath.tech/posts/Statistics/BasicTesting_files/figure-html/cell-39-output-1.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/Statistics/BasicTesting_files/figure-html/cell-39-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <p>The blue histogram is the distribution of our random sampling. The Red is our models return. Visually the red point seems perfectly in line with the random distribution, but let’s be a bit more scientific about it. Let’s calculate the p-value, and talk about what that means.</p>
@@ -7895,7 +7895,7 @@ background-color: null;
 font-style: inherit;">'upper left'</span>) </span>
 <span id="cb50-21">plt.show()</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://isaac-flath.tech/posts/Statistics/BasicTesting_files/figure-html/cell-41-output-1.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/Statistics/BasicTesting_files/figure-html/cell-41-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell">
@@ -8066,7 +8066,7 @@ background-color: null;
 font-style: inherit;">'upper left'</span>) </span>
 <span id="cb53-21">plt.show()</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://isaac-flath.tech/posts/Statistics/BasicTesting_files/figure-html/cell-43-output-1.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/Statistics/BasicTesting_files/figure-html/cell-43-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell">
@@ -8260,7 +8260,7 @@ background-color: null;
 font-style: inherit;">'upper left'</span>) </span>
 <span id="cb56-23">plt.show()</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://isaac-flath.tech/posts/Statistics/BasicTesting_files/figure-html/cell-45-output-1.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/Statistics/BasicTesting_files/figure-html/cell-45-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell">
@@ -8316,14 +8316,14 @@ font-style: inherit;">print</span>(p_value)</span></code></pre></div>
  ]]></description>
   <category>Time Series</category>
   <category>Testing</category>
-  <guid>https://isaac-flath.tech/posts/Statistics/BasicTesting.html</guid>
+  <guid>https://tefitidotai.github.io/website/posts/Statistics/BasicTesting.html</guid>
   <pubDate>Fri, 30 Sep 2022 00:00:00 GMT</pubDate>
-  <media:content url="https://isaac-flath.tech/posts/_TopicImages/TimeSeries.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://tefitidotai.github.io/website/posts/_TopicImages/TimeSeries.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Bootstrapping</title>
   <dc:creator>Isaac Flath</dc:creator>
-  <link>https://isaac-flath.tech/posts/APL/BasicStats.html</link>
+  <link>https://tefitidotai.github.io/website/posts/APL/BasicStats.html</link>
   <description><![CDATA[ 
 
 
@@ -8656,14 +8656,14 @@ n ÷⍨ +/ sampling_means &lt; experiment_mean</code></pre>
   <category>APL</category>
   <category>Data Exploration</category>
   <category>Testing</category>
-  <guid>https://isaac-flath.tech/posts/APL/BasicStats.html</guid>
+  <guid>https://tefitidotai.github.io/website/posts/APL/BasicStats.html</guid>
   <pubDate>Tue, 20 Sep 2022 00:00:00 GMT</pubDate>
-  <media:content url="https://isaac-flath.tech/posts/_TopicImages/bootstrap.jpeg" medium="image" type="image/jpeg"/>
+  <media:content url="https://tefitidotai.github.io/website/posts/_TopicImages/bootstrap.jpeg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Simple Time Series (Stock Prices)</title>
   <dc:creator>Isaac Flath</dc:creator>
-  <link>https://isaac-flath.tech/posts/TimeSeries/SimpleTimeSeries.html</link>
+  <link>https://tefitidotai.github.io/website/posts/TimeSeries/SimpleTimeSeries.html</link>
   <description><![CDATA[ 
 
 
@@ -9718,7 +9718,7 @@ font-style: inherit;">len</span>(regr)): ax.plot(_.index,regr_padded[i])</span>
 <span id="cb19-26"></span>
 <span id="cb19-27">plt.show()</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://isaac-flath.tech/posts/TimeSeries/SimpleTimeSeries_files/figure-html/cell-16-output-1.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/TimeSeries/SimpleTimeSeries_files/figure-html/cell-16-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <p>So we take the slope of the trend line to be our momentum. There are very similar levers as before we can change to fine tune out approach:</p>
@@ -10354,7 +10354,7 @@ font-style: inherit;">=</span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">'2016-01-01'</span>)</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://isaac-flath.tech/posts/TimeSeries/SimpleTimeSeries_files/figure-html/cell-22-output-1.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/TimeSeries/SimpleTimeSeries_files/figure-html/cell-22-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <p>These charts show stock prices for Apple and Microsoft over time in orange. The green is our upper band, which in this case is 2 standard deviations above the mean when looking at the last 28 days of the adjusted close price. The blue is 2 standard deviations below the mean.</p>
@@ -10636,14 +10636,14 @@ font-style: inherit;">10</span>)</span></code></pre></div>
 
  ]]></description>
   <category>Time Series</category>
-  <guid>https://isaac-flath.tech/posts/TimeSeries/SimpleTimeSeries.html</guid>
+  <guid>https://tefitidotai.github.io/website/posts/TimeSeries/SimpleTimeSeries.html</guid>
   <pubDate>Fri, 05 Aug 2022 00:00:00 GMT</pubDate>
-  <media:content url="https://isaac-flath.tech/posts/_TopicImages/TimeSeries.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://tefitidotai.github.io/website/posts/_TopicImages/TimeSeries.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Numerical Linear Algebra Part 1</title>
   <dc:creator>Isaac Flath</dc:creator>
-  <link>https://isaac-flath.tech/posts/APL/Fastai_Numerical_Linear_Algebra_1.html</link>
+  <link>https://tefitidotai.github.io/website/posts/APL/Fastai_Numerical_Linear_Algebra_1.html</link>
   <description><![CDATA[ 
 
 
@@ -10661,7 +10661,7 @@ font-style: inherit;">10</span>)</span></code></pre></div>
 <h2 data-number="1.1" class="anchored" data-anchor-id="why-study-numerical-linear-algebra"><span class="header-section-number">1.1</span> Why study Numerical Linear Algebra?</h2>
 <p><strong>Key Question of this course</strong>: How can we do matrix computations with acceptable speed and acceptable accuracy?</p>
 <p>A list of the <a href="http://www.cs.fsu.edu/~lacher/courses/COT4401/notes/cise_v2_i1/index.html">Top 10 Algorithms</a> of science and engineering during the 20th century includes: the <strong>matrix decompositions</strong> approach to linear algebra. It also includes the QR algorithm, which we’ll cover, and Krylov iterative methods which we’ll see an example of. (See here for <a href="https://nickhigham.wordpress.com/2016/03/29/the-top-10-algorithms-in-applied-mathematics/">another take</a>)</p>
-<p><img src="https://isaac-flath.tech/posts/APL/https:/github.com/fastai/numerical-linear-algebra/raw/master/nbs/images/top10.png" alt="" style="width: 50%"> (source: <a href="http://www.cs.fsu.edu/~lacher/courses/COT4401/notes/cise_v2_i1/guest.pdf">Top 10 Algorithms</a>)</p>
+<p><img src="https://tefitidotai.github.io/website/posts/APL/https:/github.com/fastai/numerical-linear-algebra/raw/master/nbs/images/top10.png" alt="" style="width: 50%"> (source: <a href="http://www.cs.fsu.edu/~lacher/courses/COT4401/notes/cise_v2_i1/guest.pdf">Top 10 Algorithms</a>)</p>
 <p>There are 4 things to keep in mind when choosing or designing an algorithm for matrix computations: - Memory Use - Speed - Accuracy - Scalability/Parallelization</p>
 <p>Often there will be trade-offs between these categories.</p>
 <section id="motivation" class="level3" data-number="1.1.1">
@@ -10681,7 +10681,7 @@ font-style: inherit;">10</span>)</span></code></pre></div>
 <h4 data-number="1.2.1.1" class="anchored" data-anchor-id="matrix-vector-products"><span class="header-section-number">1.2.1.1</span> Matrix-Vector Products:</h4>
 <p>The matrix below gives the probabilities of moving from 1 health state to another in 1 year. If the current health states for a group are: - 85% asymptomatic - 10% symptomatic - 5% AIDS - 0% death</p>
 <p>what will be the % in each health state in 1 year?</p>
-<p><img src="https://isaac-flath.tech/posts/APL/https:/github.com/fastai/numerical-linear-algebra/raw/master/nbs/images/markov_health.jpg" alt="floating point" style="width: 80%">(Source: <a href="https://www.youtube.com/watch?v=0Il-y_WLTo4">Concepts of Markov Chains</a>)</p>
+<p><img src="https://tefitidotai.github.io/website/posts/APL/https:/github.com/fastai/numerical-linear-algebra/raw/master/nbs/images/markov_health.jpg" alt="floating point" style="width: 80%">(Source: <a href="https://www.youtube.com/watch?v=0Il-y_WLTo4">Concepts of Markov Chains</a>)</p>
 </section>
 <section id="answer" class="level4" data-number="1.2.1.2">
 <h4 data-number="1.2.1.2" class="anchored" data-anchor-id="answer"><span class="header-section-number">1.2.1.2</span> Answer</h4>
@@ -10762,7 +10762,7 @@ font-style: inherit;">10</span>)</span></code></pre></div>
 </section>
 <section id="matrix-matrix-products" class="level4" data-number="1.2.1.3">
 <h4 data-number="1.2.1.3" class="anchored" data-anchor-id="matrix-matrix-products"><span class="header-section-number">1.2.1.3</span> Matrix-Matrix Products</h4>
-<p><img src="https://isaac-flath.tech/posts/APL/https:/github.com/fastai/numerical-linear-algebra/raw/master/nbs/images/shop.png" alt="floating point" style="width: 100%">(Source: <a href="https://www.mff.cuni.cz/veda/konference/wds/proc/pdf06/WDS06_106_m8_Ulrychova.pdf">Several Simple Real-world Applications of Linear Algebra Tools</a>)</p>
+<p><img src="https://tefitidotai.github.io/website/posts/APL/https:/github.com/fastai/numerical-linear-algebra/raw/master/nbs/images/shop.png" alt="floating point" style="width: 100%">(Source: <a href="https://www.mff.cuni.cz/veda/konference/wds/proc/pdf06/WDS06_106_m8_Ulrychova.pdf">Several Simple Real-world Applications of Linear Algebra Tools</a>)</p>
 </section>
 <section id="answer-1" class="level4" data-number="1.2.1.4">
 <h4 data-number="1.2.1.4" class="anchored" data-anchor-id="answer-1"><span class="header-section-number">1.2.1.4</span> Answer</h4>
@@ -10887,19 +10887,19 @@ people,3 1⍴lowest_per_person ⍝ display</code></pre>
 <section id="image-data" class="level4" data-number="1.2.1.5">
 <h4 data-number="1.2.1.5" class="anchored" data-anchor-id="image-data"><span class="header-section-number">1.2.1.5</span> Image Data</h4>
 <p>Images can be represented by matrices.</p>
-<p><img src="https://isaac-flath.tech/posts/APL/https:/github.com/fastai/numerical-linear-algebra/raw/master/nbs/images/digit.gif" alt="digit" style="width: 55%"> (Source: <a href="https://medium.com/@ageitgey/machine-learning-is-fun-part-3-deep-learning-and-convolutional-neural-networks-f40359318721">Adam Geitgey</a>)</p>
+<p><img src="https://tefitidotai.github.io/website/posts/APL/https:/github.com/fastai/numerical-linear-algebra/raw/master/nbs/images/digit.gif" alt="digit" style="width: 55%"> (Source: <a href="https://medium.com/@ageitgey/machine-learning-is-fun-part-3-deep-learning-and-convolutional-neural-networks-f40359318721">Adam Geitgey</a>)</p>
 </section>
 <section id="convolution" class="level4" data-number="1.2.1.6">
 <h4 data-number="1.2.1.6" class="anchored" data-anchor-id="convolution"><span class="header-section-number">1.2.1.6</span> Convolution</h4>
 <p><em>Convolutions</em> are the heart of convolutional neural networks (CNNs), a type of deep learning, responsible for the huge advances in image recognitionin the last few years. They are now increasingly being used for speech as well, such as <a href="https://code.facebook.com/posts/1978007565818999/a-novel-approach-to-neural-machine-translation/">Facebook AI’s results</a> for speech translation which are 9x faster than RNNs (the current most popular approach for speech translation).</p>
 <p>Computers are now more accurate than people at classifying images.</p>
-<p><img src="https://isaac-flath.tech/posts/APL/https:/github.com/fastai/numerical-linear-algebra/raw/master/nbs/images/sportspredict.jpeg" alt="ImageNet" style="width: 80%"> (Source: <a href="http://karpathy.github.io/2014/07/03/feature-learning-escapades/">Andrej Karpathy</a>)</p>
-<p><img src="https://isaac-flath.tech/posts/APL/https:/github.com/fastai/numerical-linear-algebra/raw/master/nbs/images/InsideImagenet.png" alt="ImageNet" style="width: 80%"> (Source: <a href="https://blogs.nvidia.com/blog/2014/09/07/imagenet/">Nvidia</a>)</p>
+<p><img src="https://tefitidotai.github.io/website/posts/APL/https:/github.com/fastai/numerical-linear-algebra/raw/master/nbs/images/sportspredict.jpeg" alt="ImageNet" style="width: 80%"> (Source: <a href="http://karpathy.github.io/2014/07/03/feature-learning-escapades/">Andrej Karpathy</a>)</p>
+<p><img src="https://tefitidotai.github.io/website/posts/APL/https:/github.com/fastai/numerical-linear-algebra/raw/master/nbs/images/InsideImagenet.png" alt="ImageNet" style="width: 80%"> (Source: <a href="https://blogs.nvidia.com/blog/2014/09/07/imagenet/">Nvidia</a>)</p>
 <p>You can think of a convolution as a special kind of matrix product</p>
 <p>The 3 images below are all from an excellent blog post written by a fast.ai student on <a href="https://medium.com/impactai/cnns-from-different-viewpoints-fab7f52d159c">CNNs from Different Viewpoints</a>:</p>
-<p>A convolution applies a filter to each section of an image: <img src="https://isaac-flath.tech/posts/APL/https:/github.com/fastai/numerical-linear-algebra/raw/master/nbs/images/cnn1.png" alt="CNNs" style="width: 40%"></p>
-<p>Neural Network Viewpoint: <img src="https://isaac-flath.tech/posts/APL/https:/github.com/fastai/numerical-linear-algebra/raw/master/nbs/images/cnn2.png" alt="CNNs" style="width: 40%"></p>
-<p>Matrix Multiplication Viewpoint: <img src="https://isaac-flath.tech/posts/APL/https:/github.com/fastai/numerical-linear-algebra/raw/master/nbs/images/cnn3.png" alt="CNNs" style="width: 80%"></p>
+<p>A convolution applies a filter to each section of an image: <img src="https://tefitidotai.github.io/website/posts/APL/https:/github.com/fastai/numerical-linear-algebra/raw/master/nbs/images/cnn1.png" alt="CNNs" style="width: 40%"></p>
+<p>Neural Network Viewpoint: <img src="https://tefitidotai.github.io/website/posts/APL/https:/github.com/fastai/numerical-linear-algebra/raw/master/nbs/images/cnn2.png" alt="CNNs" style="width: 40%"></p>
+<p>Matrix Multiplication Viewpoint: <img src="https://tefitidotai.github.io/website/posts/APL/https:/github.com/fastai/numerical-linear-algebra/raw/master/nbs/images/cnn3.png" alt="CNNs" style="width: 80%"></p>
 <p>Let’s see how convolutions can be used for <em>edge detection</em> in <a href="convolution-intro.ipynb">this notebook</a>(originally from the <a href="http://course.fast.ai/">fast.ai Deep Learning Course</a>)</p>
 </section>
 </section>
@@ -10907,11 +10907,11 @@ people,3 1⍴lowest_per_person ⍝ display</code></pre>
 <h3 data-number="1.2.2" class="anchored" data-anchor-id="matrix-decompositions"><span class="header-section-number">1.2.2</span> Matrix Decompositions</h3>
 <p>We will be talking about Matrix Decompositions every day of this course, and will cover the below examples in future lessons:</p>
 <ul>
-<li><p><strong>Topic Modeling</strong> (NMF and SVD. SVD uses QR) A group of documents can be represented by a term-document matrix <img src="https://isaac-flath.tech/posts/APL/https:/github.com/fastai/numerical-linear-algebra/raw/master/nbs/images/document_term.png" alt="term-document matrix" style="width: 70%"> (source: <a href="http://player.slideplayer.com/15/4528582/#">Introduction to Information Retrieval</a>) <img src="https://isaac-flath.tech/posts/APL/https:/github.com/fastai/numerical-linear-algebra/raw/master/nbs/images/nmf_doc.png" alt="NMF on documents" style="width: 70%"> (source: <a href="http://perso.telecom-paristech.fr/~essid/teach/NMF_tutorial_ICME-2014.pdf">NMF Tutorial</a>)</p></li>
-<li><p><strong>Background removal</strong> (robust PCA, which uses truncated SVD) <img src="https://isaac-flath.tech/posts/APL/https:/github.com/fastai/numerical-linear-algebra/raw/master/nbs/images/surveillance3.png" class="img-fluid" alt="background removal"></p></li>
+<li><p><strong>Topic Modeling</strong> (NMF and SVD. SVD uses QR) A group of documents can be represented by a term-document matrix <img src="https://tefitidotai.github.io/website/posts/APL/https:/github.com/fastai/numerical-linear-algebra/raw/master/nbs/images/document_term.png" alt="term-document matrix" style="width: 70%"> (source: <a href="http://player.slideplayer.com/15/4528582/#">Introduction to Information Retrieval</a>) <img src="https://tefitidotai.github.io/website/posts/APL/https:/github.com/fastai/numerical-linear-algebra/raw/master/nbs/images/nmf_doc.png" alt="NMF on documents" style="width: 70%"> (source: <a href="http://perso.telecom-paristech.fr/~essid/teach/NMF_tutorial_ICME-2014.pdf">NMF Tutorial</a>)</p></li>
+<li><p><strong>Background removal</strong> (robust PCA, which uses truncated SVD) <img src="https://tefitidotai.github.io/website/posts/APL/https:/github.com/fastai/numerical-linear-algebra/raw/master/nbs/images/surveillance3.png" class="img-fluid" alt="background removal"></p></li>
 <li><p><strong>Google’s PageRank Algorithm</strong> (eigen decomposition)</p></li>
 </ul>
-<p><img src="https://isaac-flath.tech/posts/APL/https:/github.com/fastai/numerical-linear-algebra/raw/master/nbs/images/page_rank_graph.png" alt="PageRank" style="width: 70%"> (source: <a href="http://computationalculture.net/article/what_is_in_pagerank">What is in PageRank?</a>)</p>
+<p><img src="https://tefitidotai.github.io/website/posts/APL/https:/github.com/fastai/numerical-linear-algebra/raw/master/nbs/images/page_rank_graph.png" alt="PageRank" style="width: 70%"> (source: <a href="http://computationalculture.net/article/what_is_in_pagerank">What is in PageRank?</a>)</p>
 <ul>
 <li>List of other decompositions and some applications <a href="https://sites.google.com/site/igorcarron2/matrixfactorizations">matrix factorization jungle</a></li>
 </ul>
@@ -11029,14 +11029,14 @@ gen←{(f⍣⍵)⍺}</code></pre>
 <p>Two Limitations of computer representations of numbers: 1. they can’t be arbitrarily large or small 2. there must be gaps between them</p>
 <p>The reason we need to care about accuracy, is because computers can’t store infinitely accurate numbers. It’s possible to create calculations that give very wrong answers (particularly when repeating an operation many times, since each operation could multiply the error).</p>
 <p>How computers store numbers:</p>
-<p><img src="https://isaac-flath.tech/posts/APL/https:/github.com/fastai/numerical-linear-algebra/raw/master/nbs/images/fpa.png" alt="floating point" style="width: 60%"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/APL/https:/github.com/fastai/numerical-linear-algebra/raw/master/nbs/images/fpa.png" alt="floating point" style="width: 60%"></p>
 <p>The <em>mantissa</em> can also be referred to as the <em>significand</em>.</p>
 <p>IEEE Double precision arithmetic: - Numbers can be as large as <img src="https://latex.codecogs.com/png.latex?1.79%20%5Ctimes%2010%5E%7B308%7D"> and as small as <img src="https://latex.codecogs.com/png.latex?2.23%20%5Ctimes%2010%5E%7B-308%7D">. - The interval <img src="https://latex.codecogs.com/png.latex?%5B1,2%5D"> is represented by discrete subset: <img src="https://latex.codecogs.com/png.latex?1,%20%5C:%201+2%5E%7B-52%7D,%20%5C:%201+2%20%5Ctimes%202%5E%7B-52%7D,%5C:%201+3%20%5Ctimes%202%5E%7B-52%7D,%5C:%20%5Cldots,%202"></p>
 <ul>
 <li>The interval <img src="https://latex.codecogs.com/png.latex?%5B2,4%5D"> is represented: <img src="https://latex.codecogs.com/png.latex?2,%20%5C:%202+2%5E%7B-51%7D,%20%5C:%202+2%20%5Ctimes%202%5E%7B-51%7D,%5C:%202+3%20%5Ctimes%202%5E%7B-51%7D,%5C:%20%5Cldots,%204"></li>
 </ul>
 <p>Floats and doubles are not equidistant:</p>
-<p><img src="https://isaac-flath.tech/posts/APL/https:/github.com/fastai/numerical-linear-algebra/raw/master/nbs/images/fltscale-wh.png" alt="floating point" style="width: 100%"> Source: <a href="http://www.volkerschatz.com/science/float.html">What you never wanted to know about floating point but will be forced to find out</a></p>
+<p><img src="https://tefitidotai.github.io/website/posts/APL/https:/github.com/fastai/numerical-linear-algebra/raw/master/nbs/images/fltscale-wh.png" alt="floating point" style="width: 100%"> Source: <a href="http://www.volkerschatz.com/science/float.html">What you never wanted to know about floating point but will be forced to find out</a></p>
 <p><strong>Machine Epsilon</strong></p>
 <p>Half the distance between 1 and the next larger number. This can vary by computer. IEEE standards for double precision specify <img src="https://latex.codecogs.com/png.latex?%20%5Cvarepsilon_%7Bmachine%7D%20=%202%5E%7B-53%7D%20%5Capprox%201.11%20%5Ctimes%2010%5E%7B-16%7D"></p>
 <p><strong>Two important properties of Floating Point Arithmetic</strong>:</p>
@@ -11132,7 +11132,7 @@ eigenvalues B</code></pre>
 <p>It’s rare that we need to do highly accurate matrix computations at scale. In fact, often we’re doing some kind of machine learning, and less accurate approaches can prevent overfitting.</p>
 <p>If we accept some decrease in accuracy, then we can often increase speed by orders of magnitude (and/or decrease memory use) by using approximate algorithms. These algorithms typically give a correct answer with some probability. By rerunning the algorithm multiple times you can generally increase that probability multiplicatively!</p>
 <p><strong>Example</strong>: A <strong>bloom filter</strong> allows searching for set membership with 1% false positives, using &lt;10 bits per element. This often represents reductions in memory use of thousands of times.</p>
-<p><img src="https://isaac-flath.tech/posts/APL/https:/github.com/fastai/numerical-linear-algebra/raw/master/nbs/images/bloom_filter.png" alt="Bloom Filters" style="width: 60%"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/APL/https:/github.com/fastai/numerical-linear-algebra/raw/master/nbs/images/bloom_filter.png" alt="Bloom Filters" style="width: 60%"></p>
 <p>The false positives can be easily handled by having a second (exact) stage check all returned items - for rare items this can be very effective. For instance, many web browsers use a bloom filter to create a set of blocked pages (e.g.&nbsp;pages with viruses), since blocked web pages are only a small fraction of the whole web. A false positive can be handled here by taking anything returned by the bloom filter and checking against a web service with the full exact list. (See this <a href="https://llimllib.github.io/bloomfilter-tutorial/">bloom filter tutorial</a> for more details).</p>
 </section>
 <section id="expensive-errors" class="level3" data-number="1.3.4">
@@ -11145,7 +11145,7 @@ eigenvalues B</code></pre>
 ⍝YouTubeVideo("PK_yguLapgA")</code></pre>
 </div>
 <p>Here is a floating point error that cost Intel $475 million:</p>
-<p><a href="http://www.nytimes.com/1994/11/24/business/company-news-flaw-undermines-accuracy-of-pentium-chips.html">1994 NYTimes article about Intel Pentium Error</a> <img src="https://isaac-flath.tech/posts/APL/https:/github.com/fastai/numerical-linear-algebra/raw/master/nbs/images/pentium_nytimes.png" class="img-fluid" alt="article"></p>
+<p><a href="http://www.nytimes.com/1994/11/24/business/company-news-flaw-undermines-accuracy-of-pentium-chips.html">1994 NYTimes article about Intel Pentium Error</a> <img src="https://tefitidotai.github.io/website/posts/APL/https:/github.com/fastai/numerical-linear-algebra/raw/master/nbs/images/pentium_nytimes.png" class="img-fluid" alt="article"></p>
 <p><strong>Resources</strong>: See Lecture 13 of Trefethen &amp; Bau and Chapter 5 of Greenbaum &amp; Chartier for more on Floating Point Arithmetic</p>
 </section>
 </section>
@@ -11154,8 +11154,8 @@ eigenvalues B</code></pre>
 <section id="sparse-vs-dense" class="level3" data-number="1.4.1">
 <h3 data-number="1.4.1" class="anchored" data-anchor-id="sparse-vs-dense"><span class="header-section-number">1.4.1</span> Sparse vs Dense</h3>
 <p>Above we covered how <em>numbers</em> are stored, now let’s talk about how <em>matrices</em> are stored. A key way to save memory (and computation) is not to store all of your matrix. Instead, just store the non-zero elements. This is called <strong>sparse</strong> storage, and it is well suited to sparse matrices, that is, matrices where most elements are zero.</p>
-<p><img src="https://isaac-flath.tech/posts/APL/https:/github.com/fastai/numerical-linear-algebra/raw/master/nbs/images/sparse.png" alt="floating point" style="width: 50%"></p>
-<p>Here is an example of the matrix from a finite element problem, which shows up in engineering (for instance, when modeling the air-flow around a plane). In this example, the non-zero elements are black and the zero elements are white: <img src="https://isaac-flath.tech/posts/APL/https:/github.com/fastai/numerical-linear-algebra/raw/master/nbs/images/Finite_element_sparse_matrix.png" alt="floating point" style="width: 50%"> <a href="https://commons.wikimedia.org/w/index.php?curid=2245335">Source</a></p>
+<p><img src="https://tefitidotai.github.io/website/posts/APL/https:/github.com/fastai/numerical-linear-algebra/raw/master/nbs/images/sparse.png" alt="floating point" style="width: 50%"></p>
+<p>Here is an example of the matrix from a finite element problem, which shows up in engineering (for instance, when modeling the air-flow around a plane). In this example, the non-zero elements are black and the zero elements are white: <img src="https://tefitidotai.github.io/website/posts/APL/https:/github.com/fastai/numerical-linear-algebra/raw/master/nbs/images/Finite_element_sparse_matrix.png" alt="floating point" style="width: 50%"> <a href="https://commons.wikimedia.org/w/index.php?curid=2245335">Source</a></p>
 <p>There are also special types of structured matrix, such as diagonal, tri-diagonal, hessenberg, and triangular, which each display particular patterns of sparsity, which can be leveraged to reduce memory and computation.</p>
 <p>The opposite of a sparse matrix is a <strong>dense</strong> matrix, along with dense storage, which simply refers to a matrix containing mostly non-zeros, in which every element is stored explicitly. Since sparse matrices are helpful and common, numerical linear algebra focuses on maintaining sparsity through as many operations in a computation as possible.</p>
 </section>
@@ -11216,14 +11216,14 @@ eigenvalues B</code></pre>
  ]]></description>
   <category>APL</category>
   <category>Linear Algebra</category>
-  <guid>https://isaac-flath.tech/posts/APL/Fastai_Numerical_Linear_Algebra_1.html</guid>
+  <guid>https://tefitidotai.github.io/website/posts/APL/Fastai_Numerical_Linear_Algebra_1.html</guid>
   <pubDate>Sun, 10 Jul 2022 00:00:00 GMT</pubDate>
-  <media:content url="https://isaac-flath.tech/posts/_TopicImages/LinearAlgebra1.png" medium="image" type="image/png" height="105" width="144"/>
+  <media:content url="https://tefitidotai.github.io/website/posts/_TopicImages/LinearAlgebra1.png" medium="image" type="image/png" height="105" width="144"/>
 </item>
 <item>
   <title>Matrix Multiplication</title>
   <dc:creator>Isaac Flath</dc:creator>
-  <link>https://isaac-flath.tech/posts/APL/MatrixMultiplication.html</link>
+  <link>https://tefitidotai.github.io/website/posts/APL/MatrixMultiplication.html</link>
   <description><![CDATA[ 
 
 
@@ -11514,14 +11514,14 @@ M!.⍟N</code></pre>
  ]]></description>
   <category>APL</category>
   <category>Linear Algebra</category>
-  <guid>https://isaac-flath.tech/posts/APL/MatrixMultiplication.html</guid>
+  <guid>https://tefitidotai.github.io/website/posts/APL/MatrixMultiplication.html</guid>
   <pubDate>Sun, 10 Jul 2022 00:00:00 GMT</pubDate>
-  <media:content url="https://isaac-flath.tech/posts/_TopicImages/APL.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://tefitidotai.github.io/website/posts/_TopicImages/APL.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Tabular Data Intro</title>
   <dc:creator>Isaac Flath</dc:creator>
-  <link>https://isaac-flath.tech/posts/APL/TabularData.html</link>
+  <link>https://tefitidotai.github.io/website/posts/APL/TabularData.html</link>
   <description><![CDATA[ 
 
 
@@ -11887,14 +11887,14 @@ movavg ← (ws ↑ AAPL[;3]) , ws ÷⍨ (ws←90) +⌿ AAPL[;3]
  ]]></description>
   <category>APL</category>
   <category>Tabular Modeling</category>
-  <guid>https://isaac-flath.tech/posts/APL/TabularData.html</guid>
+  <guid>https://tefitidotai.github.io/website/posts/APL/TabularData.html</guid>
   <pubDate>Thu, 07 Jul 2022 00:00:00 GMT</pubDate>
-  <media:content url="https://isaac-flath.tech/posts/_TopicImages/TabularData1.png" medium="image" type="image/png" height="144" width="144"/>
+  <media:content url="https://tefitidotai.github.io/website/posts/_TopicImages/TabularData1.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>Introduction to Attribution</title>
   <dc:creator>Isaac Flath</dc:creator>
-  <link>https://isaac-flath.tech/posts/Other/MarketingAttribution.html</link>
+  <link>https://tefitidotai.github.io/website/posts/Other/MarketingAttribution.html</link>
   <description><![CDATA[ 
 
 
@@ -11949,7 +11949,7 @@ Ask Yourself
 <p>This is just what it sounds like - you attribute the sale to the last touch. Last-Touch Attribution would say whatever the most recent activity was before the sale was 100% responsible for that sale.</p>
 <p><strong>Example Interaction</strong></p>
 <p>For Last-Touch let’s consider a scenario where we are selling pens and pencils. We send a bunch of ads to see what sticks and attribute it like this (all to the last-touch).</p>
-<p><img src="https://isaac-flath.tech/posts/_my_icons/Attribution_LastTouch.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/_my_icons/Attribution_LastTouch.png" class="img-fluid"></p>
 <p><strong>Why would you use last-touch attribution</strong>?</p>
 <p>Because last-touch gives sole weight to the last interaction, it can be very helpful in products or companies where customers do not think about the purchase for extended periods of time.</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -11996,7 +11996,7 @@ Example
 <p>My dad just planned a trip to Joshua Tree. He visited long ago and has been getting regular email, letters, and voice mails updating him on new events to encourage him to return. For months he didn’t open or respond to a single one, but it did get him thinking about how much he enjoyed it and would like to go back. Eventually he opened an email and did some research to plan his trip and is going next month</p>
 </div>
 </div>
-<p><img src="https://isaac-flath.tech/posts/_my_icons/Attribution_NoDecay.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/_my_icons/Attribution_NoDecay.png" class="img-fluid"></p>
 <p><strong>Why would you use no-decay attribution</strong>?</p>
 <p>No-decay attribution can be in scenarios where any given interaction could trigger a sale, you just need it to land at the right time and different people continue to think through. If the customer doesn’t say no, then they may later say yes. In some scenarios which they say “yes” to isn’t consistent so you can equally weight them all.</p>
 </section>
@@ -12019,7 +12019,7 @@ Example
 <p>Imagine you want to get a new couch (or your spouse wants you to get a new couch). It’s not really a priority or very urgent You do a quick amazon search but don’t buy in the moment and plan to come back to it later to figure out what to buy and who from. It’s not particularly important because you already have one and while it would be nice to have a nicer one, it really isn’t a big deal. This could go on for years, but with the right messaging this person could be motivated to buy.</p>
 </div>
 </div>
-<p><img src="https://isaac-flath.tech/posts/_my_icons/Attribution_TimeDecay.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/_my_icons/Attribution_TimeDecay.png" class="img-fluid"></p>
 <p><strong>Why would you use position-decay or time-decay attribution</strong>?</p>
 <p>You may get various advertisements about it before you eventually take the time to place the purchase. While each does have importance to help remind you to make the purchase - the one that triggers you to buy is most important because it hit at the time with the message to motivate you to actually take action. Maybe the messaging was better, maybe the time it was sent was better, but for whatever reason it was better. The older messages did have an impact because it kept it at the forefront of your mind, but the older it was the clearer it is that it did not trigger a purchase. The final final action is what triggered the buy and you feel it deserves the most credit.</p>
 </section>
@@ -12041,7 +12041,7 @@ Example
 <p>To re-use the example from before, My dad just planned a trip to Joshua Tree. He visited long ago and has been getting regular email, letters, and voice mails updating him on new events to encourage him to return. For months he didn’t open or respond to a single one, but it did get him thinking about how much he enjoyed it and would like to go back. Eventually he opened an email and did some research to plan his trip and is going next month</p>
 </div>
 </div>
-<p><img src="https://isaac-flath.tech/posts/_my_icons/Attribution_UShaped.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/_my_icons/Attribution_UShaped.png" class="img-fluid"></p>
 <p><strong>Why would you use u-shaped attribution</strong>?</p>
 <p>In this case you could argue that the initial outreach that got him thinking about going on the trip was was very important. The final communication that got him to purchase was also important. The stuff that happened in the middle mattered but wasn’t as critical and wasn’t even looked at. Because of this both the first and last touch are given heavy attribution while the middle stuff is given less.</p>
 <p>In some luxury products this can be a great attribution methodology.</p>
@@ -12190,14 +12190,14 @@ Tip
 
  ]]></description>
   <category>Tabular Modeling</category>
-  <guid>https://isaac-flath.tech/posts/Other/MarketingAttribution.html</guid>
+  <guid>https://tefitidotai.github.io/website/posts/Other/MarketingAttribution.html</guid>
   <pubDate>Sat, 17 Jul 2021 00:00:00 GMT</pubDate>
-  <media:content url="https://isaac-flath.tech/posts/_TopicImages/Algorithm.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://tefitidotai.github.io/website/posts/_TopicImages/Algorithm.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Practical Chatbots</title>
   <dc:creator>Isaac Flath</dc:creator>
-  <link>https://isaac-flath.tech/posts/NeuralNetworks/ChatBots.html</link>
+  <link>https://tefitidotai.github.io/website/posts/NeuralNetworks/ChatBots.html</link>
   <description><![CDATA[ 
 
 
@@ -12214,14 +12214,14 @@ Tip
 
  ]]></description>
   <category>Neural Networks</category>
-  <guid>https://isaac-flath.tech/posts/NeuralNetworks/ChatBots.html</guid>
+  <guid>https://tefitidotai.github.io/website/posts/NeuralNetworks/ChatBots.html</guid>
   <pubDate>Wed, 23 Jun 2021 00:00:00 GMT</pubDate>
-  <media:content url="https://isaac-flath.tech/posts/_TopicImages/NeuralNetwork.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://tefitidotai.github.io/website/posts/_TopicImages/NeuralNetwork.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Multi-Armed Bandits</title>
   <dc:creator>Isaac Flath</dc:creator>
-  <link>https://isaac-flath.tech/posts/Other/MultiArmedBandits.html</link>
+  <link>https://tefitidotai.github.io/website/posts/Other/MultiArmedBandits.html</link>
   <description><![CDATA[ 
 
 
@@ -12924,14 +12924,14 @@ font-style: inherit;">10</span>)</span></code></pre></div>
 
  ]]></description>
   <category>Tabular Modeling</category>
-  <guid>https://isaac-flath.tech/posts/Other/MultiArmedBandits.html</guid>
+  <guid>https://tefitidotai.github.io/website/posts/Other/MultiArmedBandits.html</guid>
   <pubDate>Thu, 15 Apr 2021 00:00:00 GMT</pubDate>
-  <media:content url="https://isaac-flath.tech/posts/_TopicImages/Algorithm.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://tefitidotai.github.io/website/posts/_TopicImages/Algorithm.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Python Concurrency</title>
   <dc:creator>Isaac Flath</dc:creator>
-  <link>https://isaac-flath.tech/posts/Python/PythonConcurrency.html</link>
+  <link>https://tefitidotai.github.io/website/posts/Python/PythonConcurrency.html</link>
   <description><![CDATA[ 
 
 
@@ -13419,7 +13419,7 @@ font-style: inherit;">'off'</span>)<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">;</span> plt.show()</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://isaac-flath.tech/posts/Python/PythonConcurrency_files/figure-html/cell-11-output-1.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/Python/PythonConcurrency_files/figure-html/cell-11-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 </section>
@@ -13678,14 +13678,14 @@ Note
  ]]></description>
   <category>Python</category>
   <category>Programming</category>
-  <guid>https://isaac-flath.tech/posts/Python/PythonConcurrency.html</guid>
+  <guid>https://tefitidotai.github.io/website/posts/Python/PythonConcurrency.html</guid>
   <pubDate>Thu, 01 Apr 2021 00:00:00 GMT</pubDate>
-  <media:content url="https://isaac-flath.tech/posts/_TopicImages/python.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://tefitidotai.github.io/website/posts/_TopicImages/python.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>CycleGAN Walk Through</title>
   <dc:creator>Isaac Flath</dc:creator>
-  <link>https://isaac-flath.tech/posts/GenerativeModels/CycleGanWalkThrough.html</link>
+  <link>https://tefitidotai.github.io/website/posts/GenerativeModels/CycleGanWalkThrough.html</link>
   <description><![CDATA[ 
 
 
@@ -14122,7 +14122,7 @@ background-color: null;
 font-style: inherit;">8</span>)</span>
 <span id="cb4-2">train_dataloader.dataset.show_batch()</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://isaac-flath.tech/posts/GenerativeModels/CycleGanWalkThrough_files/figure-html/cell-5-output-1.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/GenerativeModels/CycleGanWalkThrough_files/figure-html/cell-5-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 </section>
@@ -14420,7 +14420,7 @@ Note
 <p>Fore more on convolutions <a href="https://towardsdatascience.com/a-comprehensive-guide-to-convolutional-neural-networks-the-eli5-way-3bd2b1164a53">go here</a>. The gif below comes from that guide by <a href="https://medium.com/@_sumitsaha_">Sumit Saha</a> and the guide contains a lot of other create information.</p>
 </div>
 </div>
-<p><img src="https://isaac-flath.tech/posts/GenerativeModels/https:/miro.medium.com/max/395/1*1VJDP6qDY9-ExTuQVEOlVg.gif" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/GenerativeModels/https:/miro.medium.com/max/395/1*1VJDP6qDY9-ExTuQVEOlVg.gif" class="img-fluid"></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -14631,7 +14631,7 @@ background-color: null;
 font-style: inherit;">2</span></span></code></pre></div>
 </div>
 <p>So what is this? Well essentially it’s a normal convolution that upsamples by creating padding between cells. Here’s a visual that shows what that looks like.</p>
-<p><img src="https://isaac-flath.tech/posts/GenerativeModels/https:/i.stack.imgur.com/f2RiP.gif" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/GenerativeModels/https:/i.stack.imgur.com/f2RiP.gif" class="img-fluid"></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -14920,14 +14920,14 @@ font-style: inherit;"># backward pass</span></span></code></pre></div>
  ]]></description>
   <category>Neural Networks</category>
   <category>Image Generation</category>
-  <guid>https://isaac-flath.tech/posts/GenerativeModels/CycleGanWalkThrough.html</guid>
+  <guid>https://tefitidotai.github.io/website/posts/GenerativeModels/CycleGanWalkThrough.html</guid>
   <pubDate>Sat, 20 Mar 2021 00:00:00 GMT</pubDate>
-  <media:content url="https://isaac-flath.tech/posts/_TopicImages/NeuralNetwork.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://tefitidotai.github.io/website/posts/_TopicImages/NeuralNetwork.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>StyleGAN Components</title>
   <dc:creator>Isaac Flath</dc:creator>
-  <link>https://isaac-flath.tech/posts/GenerativeModels/StyleGanComponents.html</link>
+  <link>https://tefitidotai.github.io/website/posts/GenerativeModels/StyleGanComponents.html</link>
   <description><![CDATA[ 
 
 
@@ -14954,7 +14954,7 @@ font-style: inherit;"># backward pass</span></span></code></pre></div>
 </ul>
 <div class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
-<p><img src="https://isaac-flath.tech/posts/GenerativeModels/StyleGanComponents_files/figure-html/cell-2-output-1.png" class="img-fluid"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/GenerativeModels/StyleGanComponents_files/figure-html/cell-2-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 </section>
@@ -15869,14 +15869,14 @@ ImageSize2      torch.Size([10, 3, 16, 16])</code></pre>
  ]]></description>
   <category>Neural Networks</category>
   <category>Image Generation</category>
-  <guid>https://isaac-flath.tech/posts/GenerativeModels/StyleGanComponents.html</guid>
+  <guid>https://tefitidotai.github.io/website/posts/GenerativeModels/StyleGanComponents.html</guid>
   <pubDate>Mon, 01 Mar 2021 00:00:00 GMT</pubDate>
-  <media:content url="https://isaac-flath.tech/posts/_TopicImages/NeuralNetwork.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://tefitidotai.github.io/website/posts/_TopicImages/NeuralNetwork.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>GAN Introduction</title>
   <dc:creator>Isaac Flath</dc:creator>
-  <link>https://isaac-flath.tech/posts/GenerativeModels/GANIntroduction.html</link>
+  <link>https://tefitidotai.github.io/website/posts/GenerativeModels/GANIntroduction.html</link>
   <description><![CDATA[ 
 
 
@@ -15895,7 +15895,7 @@ ImageSize2      torch.Size([10, 3, 16, 16])</code></pre>
 <p>Google Brain did research to show how GANs can be used to enhance images. The left super blurry unrecognizable pictures were given to a GAN. The Middle column is what the GAN made when enhancing the image. The right column is what the image should look like if the GAN was perfect.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://isaac-flath.tech/posts/_my_icons/SuperEnhancement.jpg" class="img-fluid figure-img"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/_my_icons/SuperEnhancement.jpg" class="img-fluid figure-img"></p>
 <figcaption class="figure-caption">Image Enhancement</figcaption>
 </figure>
 </div>
@@ -15905,7 +15905,7 @@ ImageSize2      torch.Size([10, 3, 16, 16])</code></pre>
 <p>We can also transfer images from one style to another. Whether that’s changing video of a horse to a zerbra or combining photos with art, <a href="https://medium.com/@purnasaigudikandula/artistic-neural-style-transfer-with-pytorch-1543e08cc38f">this medium aricle</a> shows a cool example!</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://isaac-flath.tech/posts/_my_icons/DogStyleTransfer.jpeg" class="img-fluid figure-img"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/_my_icons/DogStyleTransfer.jpeg" class="img-fluid figure-img"></p>
 <figcaption class="figure-caption">Dog Style Transfer</figcaption>
 </figure>
 </div>
@@ -15915,7 +15915,7 @@ ImageSize2      torch.Size([10, 3, 16, 16])</code></pre>
 <p>In the paper <a href="https://arxiv.org/pdf/1710.10196.pdf">Progressive Growing of GANs for Improved Quality, Stability, and Variation</a>, NVIDIA showed the capability of GANs to create realistic super resolution photos of people that do not exist. These are fictional people made up by the GAN.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://isaac-flath.tech/posts/_my_icons/SuperResolution.png" class="img-fluid figure-img"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/_my_icons/SuperResolution.png" class="img-fluid figure-img"></p>
 <figcaption class="figure-caption">Super Resolution Images</figcaption>
 </figure>
 </div>
@@ -15937,7 +15937,7 @@ ImageSize2      torch.Size([10, 3, 16, 16])</code></pre>
 <p>The Critic is the quality gauge on the Generator while the generator is what’s actually producing the data. Let’s look at a summary of each of those.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://isaac-flath.tech/posts/_my_icons/CriticGenerator.png" class="img-fluid figure-img"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/_my_icons/CriticGenerator.png" class="img-fluid figure-img"></p>
 <figcaption class="figure-caption">Critic Generator Summary</figcaption>
 </figure>
 </div>
@@ -15946,7 +15946,7 @@ ImageSize2      torch.Size([10, 3, 16, 16])</code></pre>
 <p>There is a big loop where they pass information back and forth an dlearn. Here’s generally how it works</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://isaac-flath.tech/posts/_my_icons/GANTrainingLoop.png" class="img-fluid figure-img"></p>
+<p><img src="https://tefitidotai.github.io/website/posts/_my_icons/GANTrainingLoop.png" class="img-fluid figure-img"></p>
 <figcaption class="figure-caption">GAN Training Loop</figcaption>
 </figure>
 </div>
@@ -15993,9 +15993,9 @@ ImageSize2      torch.Size([10, 3, 16, 16])</code></pre>
  ]]></description>
   <category>Neural Networks</category>
   <category>Image Generation</category>
-  <guid>https://isaac-flath.tech/posts/GenerativeModels/GANIntroduction.html</guid>
+  <guid>https://tefitidotai.github.io/website/posts/GenerativeModels/GANIntroduction.html</guid>
   <pubDate>Sat, 20 Feb 2021 00:00:00 GMT</pubDate>
-  <media:content url="https://isaac-flath.tech/posts/_TopicImages/NeuralNetwork.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://tefitidotai.github.io/website/posts/_TopicImages/NeuralNetwork.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
