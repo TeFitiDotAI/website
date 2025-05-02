@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2022-09-20">
 <meta name="description" content="Sampling and Bootstrapping Statistics in APL">
 
-<title>Bootstrapping – Isaac Flath</title>
+<title>Te Fiti - Bootstrapping</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -26,14 +26,14 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../favicon/favicon-32x32.png" rel="icon" type="image/png">
+<link href="../../favicon/tefiti-32x32.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -51,13 +51,7 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
+  "limit": 20,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -66,7 +60,6 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
-    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -82,61 +75,49 @@ gtag('js', new Date());
 gtag('config', 'G-XNZGT59XWP', { 'anonymize_ip': true});
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Bootstrapping – Isaac Flath">
+<meta property="og:title" content="Te Fiti - Bootstrapping">
 <meta property="og:description" content="Sampling and Bootstrapping Statistics in APL">
 <meta property="og:image" content="https://isaac-flath.tech/posts/_TopicImages/bootstrap.jpeg">
-<meta property="og:site_name" content="Isaac Flath">
+<meta property="og:site-name" content="Te Fiti">
 <meta property="og:locale" content="en_US">
-<meta name="twitter:title" content="Bootstrapping – Isaac Flath">
+<meta name="twitter:title" content="Te Fiti - Bootstrapping">
 <meta name="twitter:description" content="Sampling and Bootstrapping Statistics in APL">
-<meta name="twitter:image" content="https://isaac-flath.tech/posts/_TopicImages/bootstrap.jpeg">
-<meta name="twitter:creator" content="@isaac_flath">
+<meta name="twitter:image" content="https://isaac-flath.tech/posts/APL/street.jpg">
+<meta name="twitter:creator" content="@tefiti">
 <meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
+      <div class="navbar-brand-container">
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">Isaac Flath</span>
+    <span class="navbar-title">Te Fiti</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
-<span class="menu-text">About Me</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../blog.html"> 
-<span class="menu-text">Blog</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../til.html"> 
-<span class="menu-text">TIL</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../testimonials.html"> 
-<span class="menu-text">Testimonials</span></a>
+    <a class="nav-link" href="../../blog.html" rel="" target="">
+ <span class="menu-text">Blog</span></a>
   </li>  
 </ul>
-          </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
+          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -215,7 +196,6 @@ gtag('config', 'G-XNZGT59XWP', { 'anonymize_ip': true});
 
 
 
-
 <section id="samplingbootstrapping" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Sampling/Bootstrapping</h1>
 <p>This post shows how to calculate statistics in the way I believe should be the default for data scientists, bootstrapping. If you are not familiar with this approach and think it sounds intriguing, <a href="https://www.lock5stat.com/">check out this page</a> to find a great book to get a fantastic start on bootstrapping and practical statistics.</p>
@@ -279,7 +259,7 @@ Note
 <p>First, a <strong>sample</strong> is a subset of our data. <code>[1, 0, 2, 1]</code> is a sample of <code>[0, 1, 2, 3]</code>. A few things about samples: + We will sample by taking a random selection of values from our data. + We are sampling with replacement, meaning we can pick the same data point multiple times.</p>
 <p>Next, a <strong>distribution</strong> is mostly just a bunch of data points. In our case we are going to have a bunch of samples.</p>
 <p>So we need a way to create a sample, and then we need to do that a bunch of times. Let’s get started.</p>
-<div id="61e2891f" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>]box on -style=max</code></pre>
 <div class="cell-output cell-output-display">
 <pre class="language-APL">┌→────────────────┐
@@ -295,7 +275,7 @@ Note
 <li>Create some data for us to sample</li>
 <li>Get 5 random numbers between 1 and 10 (no duplicate numbers)</li>
 </ul>
-<div id="9019e410" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>⎕←V ← 5?10</code></pre>
 <div class="cell-output cell-output-display">
 <pre class="language-APL">┌→─────────┐
@@ -310,7 +290,7 @@ Note
 <li>Get random sample of indexes</li>
 <li>Get 10 random numbers between 1 and ≢V (duplicates allowed)</li>
 </ul>
-<div id="19a37250" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>⎕←S←?10⍴≢V</code></pre>
 <div class="cell-output cell-output-display">
 <pre class="language-APL">┌→──────────────────┐
@@ -320,7 +300,7 @@ Note
 </div>
 </div>
 <p>Since that created random index locations, we can look those indexes up in our original vector <code>V</code> to get our random sample.</p>
-<div id="6f45f38d" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>V[S]</code></pre>
 <div class="cell-output cell-output-display">
 <pre class="language-APL">┌→───────────────────┐
@@ -330,7 +310,7 @@ Note
 </div>
 </div>
 <p>If we put that together we get a nice compact way of drawing a sample.</p>
-<div id="be19cd56" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>V[?10 ⍴ ≢V]</code></pre>
 <div class="cell-output cell-output-display">
 <pre class="language-APL">┌→───────────────────┐
@@ -345,7 +325,7 @@ Note
 <p>We drew a sample, but really what we want to do is draw a whole bunch of samples. All we have to do is create a matrix of indices instead of a vector and the exact same approach works.</p>
 <p>This is the same as above, except instead of <code>10 ⍴</code> to create an array of shape 10, we use <code>5 10 ⍴</code> to create an array of shape 5 by 10.</p>
 <p>For convenience I store the shapes in a variable for later use.</p>
-<div id="482f4928" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>V[?(n←5) (ss←10) ⍴ ≢V]</code></pre>
 <div class="cell-output cell-output-display">
 <pre class="language-APL">┌→──────────────────────────┐
@@ -366,7 +346,7 @@ Note
 <section id="confidence-intervals" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="confidence-intervals"><span class="header-section-number">3.1</span> Confidence Intervals</h2>
 <p>Lets do a bigger sample and calculate our confidence interval using 10000 random numbers between 1 and 100.</p>
-<div id="1033b2bb" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>data ← ?10000/100 
 
 10↑data ⍝ look at first 10 values</code></pre>
@@ -378,7 +358,7 @@ Note
 </div>
 </div>
 <p>Next we can calculate a sampling distribution and look a a few of them. We use the code from before but with 1000 pulls.</p>
-<div id="91c96831" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>sampling_distribution←data[? (n←1000) (ss←10) ⍴ ≢ data]
 5↑sampling_distribution</code></pre>
 <div class="cell-output cell-output-display">
@@ -397,7 +377,7 @@ Note
 <li><code>+/</code> Row-wise sum (trailing axis)</li>
 <li><code>ss÷⍨</code> divides each element by ss (ss defined when creating sampling distribution)</li>
 </ul>
-<div id="e9a7f7b9" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>sample_means ← ss÷⍨+/ sampling_distribution
 8↑sample_means</code></pre>
 <div class="cell-output cell-output-display">
@@ -411,11 +391,11 @@ Note
 <ul>
 <li>⍋ sorts ascending, then cut off first 50 and take the first 900 of that</li>
 </ul>
-<div id="2b2b0607" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>order90 ← 900↑50↓⍋sample_means</code></pre>
 </div>
 <p>Get min and max of middle 90% of sample means, which is our 90% confidence interval. Because our data is sorted we can just get the first and last value.</p>
-<div id="c1f9731e" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>sample_means[⊣/order90]
 sample_means[⊢/order90]</code></pre>
 <div class="cell-output cell-output-display">
@@ -451,13 +431,13 @@ Note
 </div>
 <section id="p-value-on-equal-means" class="level3" data-number="3.2.1">
 <h3 data-number="3.2.1" class="anchored" data-anchor-id="p-value-on-equal-means"><span class="header-section-number">3.2.1</span> P value on equal means</h3>
-<div id="044a5461" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>baseline ← 1-⍨2×⍨?10000/0
 experiment ← 0.5-⍨?100/0</code></pre>
 </div>
 <p>These should have roughly the same means so we should get a large p value and show the difference is not statistically significant</p>
 <p>Let’s run the test and see what we get. First let’s get our statistic from our experiment (mean).</p>
-<div id="6bd48af6" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>⎕←experiment_mean ← (+/experiment) ÷ ≢experiment</code></pre>
 <div class="cell-output cell-output-display">
 <pre class="language-APL">             
@@ -467,15 +447,15 @@ experiment ← 0.5-⍨?100/0</code></pre>
 </div>
 </div>
 <p>Now let’s create our sampling distribution on our baseline.</p>
-<div id="6d16dd1a" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>sampling_distribution←baseline[? (n←1000) (ss←10) ⍴ ≢ baseline]</code></pre>
 </div>
 <p>Calculate the means of each.</p>
-<div id="ea53d0ef" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>sampling_means ← ss ÷⍨ +/sampling_distribution</code></pre>
 </div>
 <p>We then calculate a p value by seeing what percentage of sample means our experiment mean is more extreme than. We can check this on both ends of the distribution and we would take the smaller one normally.</p>
-<div id="5854f526" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>n ÷⍨ +/ experiment_mean&gt;sampling_means
 n ÷⍨ +/ experiment_mean&lt;sampling_means</code></pre>
 <div class="cell-output cell-output-display">
@@ -494,13 +474,13 @@ n ÷⍨ +/ experiment_mean&lt;sampling_means</code></pre>
 </section>
 <section id="p-value-on-different-means" class="level3" data-number="3.2.2">
 <h3 data-number="3.2.2" class="anchored" data-anchor-id="p-value-on-different-means"><span class="header-section-number">3.2.2</span> P value on different means</h3>
-<div id="926aa83d" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>baseline ← ?10000/0
 experiment ← 0.2-⍨?100/0</code></pre>
 </div>
 <p>These should have different means so we should get a large p value and show the different is not practically significant</p>
 <p>Let’s run the test and see what we get. First let’s get our statistic from our experiment (mean).</p>
-<div id="c71600ea" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>⎕←experiment_mean ← (+/experiment) ÷ ≢experiment</code></pre>
 <div class="cell-output cell-output-display">
 <pre class="language-APL">           
@@ -510,14 +490,14 @@ experiment ← 0.2-⍨?100/0</code></pre>
 </div>
 </div>
 <p>Now let’s create our sampling distribution on our baseline.</p>
-<div id="28ad2ca9" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>sampling_distribution← baseline[? (n←1000) (ss←10) ⍴ ≢ baseline]</code></pre>
 </div>
-<div id="0b30f6ed" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>sampling_means ← ss ÷⍨ +/sampling_distribution</code></pre>
 </div>
 <p>We then calculate a p value by seeing what percentage of sample means our experiment mean is more extreme than. We can check this on both ends of the distribution, but we would take the smaller one. We can see our p value is quite small - it successfully detected that we likely have a different mean.</p>
-<div id="cc1cef9e" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>n ÷⍨ +/ sampling_means &gt; experiment_mean
 n ÷⍨ +/ sampling_means &lt; experiment_mean</code></pre>
 <div class="cell-output cell-output-display">
@@ -581,33 +561,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
-    }
-  }
-  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-    let newTheme = '';
-    if(darkModeDefault) {
-      newTheme = isAlternate ? baseTheme : alternateTheme;
-    } else {
-      newTheme = isAlternate ? alternateTheme : baseTheme;
-    }
-    const changeGiscusTheme = () => {
-      // From: https://github.com/giscus/giscus/issues/336
-      const sendMessage = (message) => {
-        const iframe = document.querySelector('iframe.giscus-frame');
-        if (!iframe) return;
-        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-      }
-      sendMessage({
-        setConfig: {
-          theme: newTheme
-        }
-      });
-    }
-    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-    if (isGiscussLoaded) {
-      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -676,15 +629,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  const darkModeDefault = false;
-  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  let localAlternateSentinel = 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
-    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -719,7 +670,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const onCopySuccess = function(e) {
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -751,50 +713,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
   });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/isaac-flath\.tech\/");
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-      }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+  function tippyHover(el, contentFn) {
     const config = {
       allowHTML: true,
+      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -804,17 +727,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start',
+      placement: 'bottom-start'
     };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -826,130 +740,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
-    }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
-          }
-        }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
-        }
-        return container.innerHTML
-      } else {
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(note);
-        }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      // TODO in 1.5, we should make sure this works without a callout special case
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
-      }
-    }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
-          }
-        } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
-          .then(res => res.text())
-          .then(html => {
-            const parser = new DOMParser();
-            const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
-            if (note !== null) {
-              const html = processXRef(id, note);
-              instance.setContent(html);
-            } 
-          }).finally(() => {
-            instance.enable();
-            instance.show();
-          });
-        }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
+      return note.innerHTML;
     });
   }
       let selectedAnnoteEl;
@@ -993,7 +784,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
-            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1019,32 +809,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1109,44 +873,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">
-<p>Isaac Flath</p>
-</div>   
+    <div class="nav-footer-left">Te Fiti</div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="https://linkedin.com/in/isaacflath/">
-<p>LinkedIn</p>
-</a>
+    <a class="nav-link" href="../../#">Twitter</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="https://github.com/isaac-flath">
-<p>Github</p>
-</a>
+    <a class="nav-link" href="../../#">Twitter</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="https://twitter.com/isaac_flath">
-<p>Twitter</p>
-</a>
+    <a class="nav-link" href="../../#">Twitter</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../../blog.xml">
-<p>Blog RSS</p>
-</a>
+    <a class="nav-link" href="../../blog.xml">Blog RSS</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../../til.xml">
-<p>TIL RSS</p>
-</a>
+    <a class="nav-link" href="../../til.xml">TIL RSS</a>
   </li>  
 </ul>
     </div>
   </div>
 </footer>
-
 
 
 
