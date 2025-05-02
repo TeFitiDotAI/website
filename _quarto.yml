@@ -6,7 +6,7 @@ execute:
 website:
   google-analytics: "G-XNZGT59XWP"
   title: "Te Fiti"
-  favicon: favicon/tefiti-32x32.png
+  favicon: favicon/apple-touch-icon.png
   open-graph:
     locale: en_US
   twitter-card:
