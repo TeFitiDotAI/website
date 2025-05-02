@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2022-07-10">
 <meta name="description" content="Numerical Linear Algebra Part 1 with translations to APL">
 
-<title>Numerical Linear Algebra Part 1 – Isaac Flath</title>
+<title>Te Fiti - Numerical Linear Algebra Part 1</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,7 +25,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -36,7 +36,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -60,14 +60,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../favicon/favicon-32x32.png" rel="icon" type="image/png">
+<link href="../../favicon/tefiti-32x32.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -85,13 +85,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
+  "limit": 20,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -100,7 +94,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
-    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -116,94 +109,53 @@ gtag('js', new Date());
 gtag('config', 'G-XNZGT59XWP', { 'anonymize_ip': true});
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Numerical Linear Algebra Part 1 – Isaac Flath">
+<meta property="og:title" content="Te Fiti - Numerical Linear Algebra Part 1">
 <meta property="og:description" content="Numerical Linear Algebra Part 1 with translations to APL">
 <meta property="og:image" content="https://isaac-flath.tech/posts/_TopicImages/LinearAlgebra1.png">
-<meta property="og:site_name" content="Isaac Flath">
+<meta property="og:site-name" content="Te Fiti">
 <meta property="og:locale" content="en_US">
 <meta property="og:image:height" content="871">
 <meta property="og:image:width" content="1200">
-<meta name="twitter:title" content="Numerical Linear Algebra Part 1 – Isaac Flath">
+<meta name="twitter:title" content="Te Fiti - Numerical Linear Algebra Part 1">
 <meta name="twitter:description" content="Numerical Linear Algebra Part 1 with translations to APL">
-<meta name="twitter:image" content="https://isaac-flath.tech/posts/_TopicImages/LinearAlgebra1.png">
-<meta name="twitter:creator" content="@isaac_flath">
+<meta name="twitter:image" content="https://isaac-flath.tech/posts/APL/street.jpg">
+<meta name="twitter:creator" content="@tefiti">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image-height" content="871">
-<meta name="twitter:image-width" content="1200">
 </head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
+      <div class="navbar-brand-container">
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">Isaac Flath</span>
+    <span class="navbar-title">Te Fiti</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
-<span class="menu-text">About Me</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../blog.html"> 
-<span class="menu-text">Blog</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../til.html"> 
-<span class="menu-text">TIL</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../testimonials.html"> 
-<span class="menu-text">Testimonials</span></a>
+    <a class="nav-link" href="../../blog.html" rel="" target="">
+ <span class="menu-text">Blog</span></a>
   </li>  
 </ul>
-          </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
+          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -293,7 +245,6 @@ window.Quarto = {
 
 
 
-
 <p>This notebook is a copy of a notebook from the fast.ai fast.ai Numerical linear algebra course. I have modified it to use APL as a learning experience for myself.</p>
 <p><strong><a href="https://nbviewer.org/github/fastai/numerical-linear-algebra/blob/master/nbs/1.%20Why%20are%20we%20here.ipynb">Check out the original notebook here</a></strong></p>
 <p>I do not have any business affiliation with fast.ai, and <strong>this notebook is not an official fast.ai notebook.</strong></p>
@@ -333,7 +284,7 @@ window.Quarto = {
 <section id="set-up-data" class="level5" data-number="1.2.1.2.1">
 <h5 data-number="1.2.1.2.1" class="anchored" data-anchor-id="set-up-data"><span class="header-section-number">1.2.1.2.1</span> Set up Data</h5>
 <p>Create category names vector for display purposes</p>
-<div id="cell-20" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>]box on -style=max</code></pre>
 <div class="cell-output cell-output-display">
 <span style="white-space:pre; font-family: monospace">┌→────────────────┐
@@ -342,11 +293,11 @@ window.Quarto = {
 </span>
 </div>
 </div>
-<div id="cell-21" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>Names←'Asymptomatic' 'Symptomatic' 'Aids'  'Death'</code></pre>
 </div>
 <p>Create current health states array</p>
-<div id="cell-23" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>Names⍪Start←1 4⍴.85 .1 .05 0</code></pre>
 <div class="cell-output cell-output-display">
 <span style="white-space:pre; font-family: monospace">┌→────────────────────────────────────────────┐
@@ -361,7 +312,7 @@ window.Quarto = {
 </div>
 </div>
 <p>Create transition table/stochastic matrix</p>
-<div id="cell-25" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>Transitions←4 4⍴.9 .07 .02 .01 0 .93 .05 .02 0 0 .85 .15 0 0 0 1
 ((⊂'States')⍪Names)⍪(Names,Transitions)</code></pre>
 <div class="cell-output cell-output-display">
@@ -389,7 +340,7 @@ window.Quarto = {
 <section id="answer-calculation" class="level5" data-number="1.2.1.2.2">
 <h5 data-number="1.2.1.2.2" class="anchored" data-anchor-id="answer-calculation"><span class="header-section-number">1.2.1.2.2</span> Answer Calculation</h5>
 <p>Multiply together to get ending health states</p>
-<div id="cell-28" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>Names⍪End←Start+.×Transitions</code></pre>
 <div class="cell-output cell-output-display">
 <span style="white-space:pre; font-family: monospace">┌→────────────────────────────────────────────┐
@@ -414,13 +365,13 @@ window.Quarto = {
 <section id="set-up-data-1" class="level5" data-number="1.2.1.4.1">
 <h5 data-number="1.2.1.4.1" class="anchored" data-anchor-id="set-up-data-1"><span class="header-section-number">1.2.1.4.1</span> Set up Data</h5>
 <p>Lets define the names of all the stuff we are working with for display purposes</p>
-<div id="cell-34" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>items←'roll' 'bun' 'cake' 'bread'
 shops←'S1' 'S2'
 people←'P1' 'P2' 'P3'</code></pre>
 </div>
 <p>Demanded quantity of foodstuff</p>
-<div id="cell-36" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>Demanded←3 4⍴6 5 3 1 3 6 2 2 3 4 3 1
 ((⊂'')⍪items)⍪(people,Demanded)</code></pre>
 <div class="cell-output cell-output-display">
@@ -441,7 +392,7 @@ people←'P1' 'P2' 'P3'</code></pre>
 </span>
 </div>
 </div>
-<div id="cell-37" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>Prices←4 2⍴1.5 1 2 2.5 5 4.5 16 17
 ((⊂'')⍪shops)⍪(items,Prices)</code></pre>
 <div class="cell-output cell-output-display">
@@ -469,7 +420,7 @@ people←'P1' 'P2' 'P3'</code></pre>
 <section id="answer-calculation-1" class="level5" data-number="1.2.1.4.2">
 <h5 data-number="1.2.1.4.2" class="anchored" data-anchor-id="answer-calculation-1"><span class="header-section-number">1.2.1.4.2</span> Answer Calculation</h5>
 <p>We can calculate the price for each shop for each person with matrix multiplication</p>
-<div id="cell-40" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>Ans←Demanded+.×Prices
 ((⊂'')⍪shops)⍪(people,Ans) ⍝ display</code></pre>
 <div class="cell-output cell-output-display">
@@ -491,7 +442,7 @@ people←'P1' 'P2' 'P3'</code></pre>
 </div>
 </div>
 <p>Then find the lowest price each person can pay so these folks can budget!</p>
-<div id="cell-42" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>lowest_per_person ← ⌊/Ans
 people,3 1⍴lowest_per_person ⍝ display</code></pre>
 <div class="cell-output cell-output-display">
@@ -510,7 +461,7 @@ people,3 1⍴lowest_per_person ⍝ display</code></pre>
 </div>
 </div>
 <p>We can also identify which store each person should go to based on the min price.</p>
-<div id="cell-44" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>3 2 ⍴ people ⍪ shops ⌷⍨ ⊂ {⍵⍳⌊/⍵}¨↓Ans</code></pre>
 <div class="cell-output cell-output-display">
 <span style="white-space:pre; font-family: monospace">┌→──────────┐
@@ -576,15 +527,15 @@ people,3 1⍴lowest_per_person ⍝ display</code></pre>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">2</span> <span class="op">*</span> x</span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> x <span class="op">&gt;</span> <span class="dv">1</span><span class="op">/</span><span class="dv">2</span>:</span>
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">2</span><span class="op">*</span>x <span class="op">-</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="cell-60" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>⍝ Translate function to APL
 f←{(2×⍵)-⍵&gt;.5}</code></pre>
 </div>
-<div id="cell-61" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>⍝ Create generator
 gen←{(f⍣⍵)⍺}</code></pre>
 </div>
-<div id="cell-62" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>⍝ First 10 generations
 .1 gen¨ ⍳10</code></pre>
 <div class="cell-output cell-output-display">
@@ -594,7 +545,7 @@ gen←{(f⍣⍵)⍺}</code></pre>
 </span>
 </div>
 </div>
-<div id="cell-63" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>⍝ First 80 generations (left to right top to bottom)
 16 5⍴.1 gen¨ ⍳80</code></pre>
 <div class="cell-output cell-output-display">
@@ -619,7 +570,7 @@ gen←{(f⍣⍵)⍺}</code></pre>
 </span>
 </div>
 </div>
-<div id="cell-64" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>⍝ Answer after 80 generations
 (f⍣80).1</code></pre>
 <div class="cell-output cell-output-display">
@@ -677,7 +628,7 @@ gen←{(f⍣⍵)⍺}</code></pre>
 <p>Example: Eigenvalues of a Matrix</p>
 <section id="create-matrices" class="level5" data-number="1.3.2.0.1">
 <h5 data-number="1.3.2.0.1" class="anchored" data-anchor-id="create-matrices"><span class="header-section-number">1.3.2.0.1</span> Create matrices</h5>
-<div id="cell-82" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>⎕←A←2 2⍴1 1000 0 1
 ⎕←B←2 2⍴1 1000 .001 1</code></pre>
 <div class="cell-output cell-output-display">
@@ -698,7 +649,7 @@ gen←{(f⍣⍵)⍺}</code></pre>
 </section>
 <section id="calculate-eigenvalues-quadratic" class="level5" data-number="1.3.2.0.2">
 <h5 data-number="1.3.2.0.2" class="anchored" data-anchor-id="calculate-eigenvalues-quadratic"><span class="header-section-number">1.3.2.0.2</span> Calculate Eigenvalues (quadratic)</h5>
-<div id="cell-84" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>I ← {⍵ ⍵ ⍴ 1, ⍵⍴0} ⍝ calculate identity
 tf← {+/+/(⍵×I 2)} ⍝ Calculate Trace
 df ← {(×/×/(⍵×I 2)+0=I 2)-×/×/(I 2)+⍵×0=I 2} ⍝ Calculate Determinant
@@ -710,7 +661,7 @@ e2←{2÷⍨⍵+.5*⍨(⍵*2)-4×⍺} ⍝ Eigenvalue 2
 ⍝ Get both eigenvalues
 eigenvalues←{(d e2 t),(d←df ⍵)e1(t←tf ⍵)} ⍝ Get both eigenvalues</code></pre>
 </div>
-<div id="cell-85" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>eigenvalues A
 eigenvalues B</code></pre>
 <div class="cell-output cell-output-display">
@@ -747,7 +698,7 @@ eigenvalues B</code></pre>
 <p><em>The below examples are from Greenbaum &amp; Chartier.</em></p>
 <p>European Space Agency spent 10 years and $7 billion on the Ariane 5 Rocket.</p>
 <p>What can happen when you try to fit a 64 bit number into a 16 bit space (integer overflow):</p>
-<div id="cell-91" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>⍝from IPython.display import YouTubeVideo
 ⍝YouTubeVideo("PK_yguLapgA")</code></pre>
 </div>
@@ -796,7 +747,7 @@ eigenvalues B</code></pre>
 <p><strong>Key take-away</strong>: Each successive memory type is (at least) an order of magnitude worse than the one before it. Disk seeks are <strong>very slow</strong>.</p>
 <p>This video has a great example of showing several ways you could compute the blur of a photo, with various trade-offs. Don’t worry about the C code that appears, just focus on the red and green moving pictures of matrix computation.</p>
 <p>Although the video is about a new language called Halide, it is a good illustration the issues it raises are universal. Watch minutes 1-13:</p>
-<div id="cell-111" class="cell">
+<div class="cell">
 <pre class="apl cell-code"><code>⍝ from IPython.display import YouTubeVideo
 ⍝ YouTubeVideo("3uiEyEKji0M")</code></pre>
 </div>
@@ -862,33 +813,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
-    }
-  }
-  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-    let newTheme = '';
-    if(darkModeDefault) {
-      newTheme = isAlternate ? baseTheme : alternateTheme;
-    } else {
-      newTheme = isAlternate ? alternateTheme : baseTheme;
-    }
-    const changeGiscusTheme = () => {
-      // From: https://github.com/giscus/giscus/issues/336
-      const sendMessage = (message) => {
-        const iframe = document.querySelector('iframe.giscus-frame');
-        if (!iframe) return;
-        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-      }
-      sendMessage({
-        setConfig: {
-          theme: newTheme
-        }
-      });
-    }
-    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-    if (isGiscussLoaded) {
-      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -957,15 +881,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  const darkModeDefault = false;
-  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  let localAlternateSentinel = 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
-    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -1000,7 +922,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const onCopySuccess = function(e) {
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1032,50 +965,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
   });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/isaac-flath\.tech\/");
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-      }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+  function tippyHover(el, contentFn) {
     const config = {
       allowHTML: true,
+      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1085,17 +979,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start',
+      placement: 'bottom-start'
     };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1107,130 +992,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
-    }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
-          }
-        }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
-        }
-        return container.innerHTML
-      } else {
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(note);
-        }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      // TODO in 1.5, we should make sure this works without a callout special case
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
-      }
-    }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
-          }
-        } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
-          .then(res => res.text())
-          .then(html => {
-            const parser = new DOMParser();
-            const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
-            if (note !== null) {
-              const html = processXRef(id, note);
-              instance.setContent(html);
-            } 
-          }).finally(() => {
-            instance.enable();
-            instance.show();
-          });
-        }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
+      return note.innerHTML;
     });
   }
       let selectedAnnoteEl;
@@ -1274,7 +1036,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
-            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1300,32 +1061,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1390,44 +1125,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">
-<p>Isaac Flath</p>
-</div>   
+    <div class="nav-footer-left">Te Fiti</div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="https://linkedin.com/in/isaacflath/">
-<p>LinkedIn</p>
-</a>
+    <a class="nav-link" href="../../#">Twitter</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="https://github.com/isaac-flath">
-<p>Github</p>
-</a>
+    <a class="nav-link" href="../../#">Twitter</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="https://twitter.com/isaac_flath">
-<p>Twitter</p>
-</a>
+    <a class="nav-link" href="../../#">Twitter</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../../blog.xml">
-<p>Blog RSS</p>
-</a>
+    <a class="nav-link" href="../../blog.xml">Blog RSS</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../../til.xml">
-<p>TIL RSS</p>
-</a>
+    <a class="nav-link" href="../../til.xml">TIL RSS</a>
   </li>  
 </ul>
     </div>
   </div>
 </footer>
-
 
 
 

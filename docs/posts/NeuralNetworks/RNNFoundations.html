@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2020-08-22">
 <meta name="description" content="What is an RNN? How does NLP work?">
 
-<title>NLP Recurrent NN Foundations – Isaac Flath</title>
+<title>Te Fiti - NLP Recurrent NN Foundations</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,7 +25,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -36,7 +36,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -60,14 +60,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../favicon/favicon-32x32.png" rel="icon" type="image/png">
+<link href="../../favicon/tefiti-32x32.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -85,13 +85,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
+  "limit": 20,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -100,7 +94,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
-    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -116,90 +109,51 @@ gtag('js', new Date());
 gtag('config', 'G-XNZGT59XWP', { 'anonymize_ip': true});
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="NLP Recurrent NN Foundations – Isaac Flath">
+<meta property="og:title" content="Te Fiti - NLP Recurrent NN Foundations">
 <meta property="og:description" content="What is an RNN? How does NLP work?">
 <meta property="og:image" content="https://isaac-flath.tech/posts/_TopicImages/NeuralNetwork.jpg">
-<meta property="og:site_name" content="Isaac Flath">
+<meta property="og:site-name" content="Te Fiti">
 <meta property="og:locale" content="en_US">
-<meta name="twitter:title" content="NLP Recurrent NN Foundations – Isaac Flath">
+<meta name="twitter:title" content="Te Fiti - NLP Recurrent NN Foundations">
 <meta name="twitter:description" content="What is an RNN? How does NLP work?">
-<meta name="twitter:image" content="https://isaac-flath.tech/posts/_TopicImages/NeuralNetwork.jpg">
-<meta name="twitter:creator" content="@isaac_flath">
+<meta name="twitter:image" content="https://isaac-flath.tech/posts/NeuralNetworks/street.jpg">
+<meta name="twitter:creator" content="@tefiti">
 <meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
+      <div class="navbar-brand-container">
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">Isaac Flath</span>
+    <span class="navbar-title">Te Fiti</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
-<span class="menu-text">About Me</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../blog.html"> 
-<span class="menu-text">Blog</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../til.html"> 
-<span class="menu-text">TIL</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../testimonials.html"> 
-<span class="menu-text">Testimonials</span></a>
+    <a class="nav-link" href="../../blog.html" rel="" target="">
+ <span class="menu-text">Blog</span></a>
   </li>  
 </ul>
-          </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
+          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -273,8 +227,7 @@ window.Quarto = {
 
 
 
-
-<div id="cell-1" class="cell">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> fastai.text.<span class="bu">all</span> <span class="im">import</span> <span class="op">*</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="credit-where-credit-is-due" class="level1" data-number="1">
@@ -285,7 +238,7 @@ window.Quarto = {
 <h1 data-number="2"><span class="header-section-number">2</span> Data Setup</h1>
 <section id="get-the-data" class="level3" data-number="2.0.1">
 <h3 data-number="2.0.1" class="anchored" data-anchor-id="get-the-data"><span class="header-section-number">2.0.1</span> Get the Data</h3>
-<div id="cell-5" class="cell">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>path <span class="op">=</span> untar_data(URLs.HUMAN_NUMBERS)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>lines <span class="op">=</span> L()</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(path<span class="op">/</span><span class="st">"train.txt"</span>) <span class="im">as</span> f: lines <span class="op">+=</span> L(<span class="op">*</span>f.readlines())</span>
@@ -300,10 +253,10 @@ window.Quarto = {
 <h3 data-number="2.0.2" class="anchored" data-anchor-id="tokenization"><span class="header-section-number">2.0.2</span> Tokenization</h3>
 <p>What is Tokenization?</p>
 <p>Tokenization is about getting ‘tokens’ of language that have meaning. A word could be a token as it has meaning. A piece of punctuation could be a token as it has meaning. If a work is in all capital letters that could be a token. A portion of a word could be a token (ie dis) because a word beginning with dis has meaning. There are many many ways to tokenize, for this post I will use the most simple approach. That is, I will split based on spaces to make each word a token.</p>
-<div id="cell-7" class="cell">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>txt <span class="op">=</span> <span class="st">' . '</span>.join([l.strip() <span class="cf">for</span> l <span class="kw">in</span> lines])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-8" class="cell">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>tokens <span class="op">=</span> L(<span class="op">*</span>txt.split(<span class="st">' '</span>))<span class="op">;</span> tokens</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <pre><code>(#63095) ['one','.','two','.','three','.','four','.','five','.'...]</code></pre>
@@ -318,7 +271,7 @@ window.Quarto = {
 <li>Assign a number to each of token (vocab)</li>
 <li>Replace tokens with numbers (nums)</li>
 </ol>
-<div id="cell-10" class="cell">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get a unique list of all tokens (v)</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> tokens.unique()</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -331,7 +284,7 @@ window.Quarto = {
 <pre><code>23</code></pre>
 </div>
 </div>
-<div id="cell-11" class="cell">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Replace tokens with numbers (nums)</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>nums <span class="op">=</span> L(vocab[tok] <span class="cf">for</span> tok <span class="kw">in</span> tokens)<span class="op">;</span> nums</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
@@ -355,7 +308,7 @@ Note
 <p>Sequence Length (<code>sl</code>) will be 3, because we are using a sequence of 3 words to predict the next word.</p>
 </div>
 </div>
-<div id="cell-13" class="cell">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>sl <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co"># For example, we will use the tokens 'one','.', and 'two' to predict '.'</span></span>
@@ -364,7 +317,7 @@ Note
 <pre><code>(#21031) [((#3) ['one','.','two'], '.'),((#3) ['.','three','.'], 'four'),((#3) ['four','.','five'], '.'),((#3) ['.','six','.'], 'seven'),((#3) ['seven','.','eight'], '.'),((#3) ['.','nine','.'], 'ten'),((#3) ['ten','.','eleven'], '.'),((#3) ['.','twelve','.'], 'thirteen'),((#3) ['thirteen','.','fourteen'], '.'),((#3) ['.','fifteen','.'], 'sixteen')...]</code></pre>
 </div>
 </div>
-<div id="cell-14" class="cell">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>seqs <span class="op">=</span> L((tensor(nums[i:i<span class="op">+</span>sl]), nums[i<span class="op">+</span>sl]) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>,<span class="bu">len</span>(nums)<span class="op">-</span>sl<span class="op">-</span><span class="dv">1</span>,sl))<span class="op">;</span> seqs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <pre><code>(#21031) [(tensor([0, 1, 2]), 1),(tensor([1, 3, 1]), 4),(tensor([4, 1, 5]), 1),(tensor([1, 6, 1]), 7),(tensor([7, 1, 8]), 1),(tensor([1, 9, 1]), 10),(tensor([10,  1, 11]), 1),(tensor([ 1, 12,  1]), 13),(tensor([13,  1, 14]), 1),(tensor([ 1, 15,  1]), 16)...]</code></pre>
@@ -374,12 +327,12 @@ Note
 <section id="dataloader" class="level3" data-number="2.0.5">
 <h3 data-number="2.0.5" class="anchored" data-anchor-id="dataloader"><span class="header-section-number">2.0.5</span> Dataloader</h3>
 <p>Now we need to create our dataloader. The <code>dataloader</code> is just packaging it into batches, and not doing any transformations or changes to the data. What we saw above is what will be given to the model.</p>
-<div id="cell-16" class="cell">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>bs <span class="op">=</span> <span class="dv">128</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>cut <span class="op">=</span> <span class="bu">int</span>(<span class="bu">len</span>(seqs) <span class="op">*</span> <span class="fl">0.8</span>)</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>dls <span class="op">=</span> DataLoaders.from_dsets(seqs[:cut],seqs[cut:],bs<span class="op">=</span>bs, shuffle<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-17" class="cell">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>dls2 <span class="op">=</span> DataLoader(seqs[:cut],bs<span class="op">=</span>bs, shuffle<span class="op">=</span><span class="va">False</span>)</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>dls3 <span class="op">=</span> DataLoader(seqs[cut:],bs<span class="op">=</span>bs, shuffle<span class="op">=</span><span class="va">False</span>)</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -393,7 +346,7 @@ Note
 <h3 data-number="3.0.1" class="anchored" data-anchor-id="naive-model"><span class="header-section-number">3.0.1</span> Naive Model</h3>
 <p>First, let’s figure out a baseline for what is the best ‘non-stupid’ model we can come up with. If a model can’t beat this score, then it’s not worth anything.</p>
 <p>The approach we will take will be to predict the most common token every time. If we do that we get about a 15% accuracy.</p>
-<div id="cell-20" class="cell">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>n,counts <span class="op">=</span> <span class="dv">0</span>,torch.zeros(<span class="bu">len</span>(vocab))</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x,y <span class="kw">in</span> dls.valid:</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    n <span class="op">+=</span> y.shape[<span class="dv">0</span>]</span>
@@ -415,7 +368,7 @@ Note
 <p><code>h = F.relu(self.h_h(h))</code> We then run our hidden to hidden function (h_h), which is a linear layer (y = wx + b). We do a ReLu of that, which is just replacing any negative values with 0.</p>
 <p><code>return self.h_o(h)</code> We then run our hidden to output function (h_o), which is another linear layer, but it is outputing the prediction of which word is next. Naturally, this is the size of our vocabulary.</p>
 <p>Wrap all that in a class and it looks like the below:</p>
-<div id="cell-22" class="cell">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> LM1(Module):</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, vocab_sz, n_hidden):</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.i_h <span class="op">=</span> nn.Embedding(vocab_sz, n_hidden)</span>
@@ -430,11 +383,11 @@ Note
 <span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span>.h_o(h)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Now we can run it below and see that we get almost 50% accuracy before we overfit, which is great considering the most common token only appears 15% of the time.</p>
-<div id="cell-24" class="cell">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>learn <span class="op">=</span> Learner(dls, LM1(<span class="bu">len</span>(vocab), <span class="dv">64</span>), loss_func<span class="op">=</span>F.cross_entropy, metrics<span class="op">=</span>accuracy)</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>learn.fit_one_cycle(<span class="dv">4</span>, <span class="fl">1e-3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th">epoch</th>
@@ -483,172 +436,16 @@ Note
 <p>So what is it REALLY doing? To understand that, I find it helpful to think about the matrix/tensor sizes at each step.</p>
 <p><strong>Embeddings</strong></p>
 <p>Let’s start with our input_hidden. Our Embedding matrix is has 64 weights (n_hidden) for each token in our vocabulary. So that looks like this:</p>
-<p><span class="math inline">\(\underbrace{
-\begin{bmatrix}
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\end{bmatrix}}_{\displaystyle 64-weights}
-\left.\vphantom{\begin{bmatrix}
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\end{bmatrix}}\right\}30-tokens\)</span></p>
+<p><span class="math inline">\(\underbrace{ \begin{bmatrix} \cdots &amp; \cdots &amp; \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \end{bmatrix}}_{\displaystyle 64-weights} \left.\vphantom{\begin{bmatrix} \cdots &amp; \cdots &amp; \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \end{bmatrix}}\right\}30-tokens\)</span></p>
 <p>Now all the embedding layer does is get the correct columns. So for the first word in the sequence we get the index, then look it up in the embedding matrix. That 1 index location turns into the 64 weights.</p>
-<p><span class="math inline">\(\underbrace{
-\begin{bmatrix}
-\cdots \\
-\cdots \\
-\cdots \\
-\cdots \\
-\cdots \\
-\cdots \\
-\end{bmatrix}}_{\displaystyle token-idx}
-\left.\vphantom{\begin{bmatrix}
-\cdots \\
-\cdots \\
-\cdots \\
-\cdots \\
-\cdots \\
-\cdots \\
-\end{bmatrix}}\right\}128-bs\)</span> <span class="math inline">\(==\)</span> lookup in embedding matrix <span class="math inline">\(==&gt;\)</span> <span class="math inline">\(\underbrace{
-\begin{bmatrix}
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\end{bmatrix}}_{\displaystyle 64}
-\left.\vphantom{\begin{bmatrix}
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\end{bmatrix}}\right\}128\)</span></p>
+<p><span class="math inline">\(\underbrace{ \begin{bmatrix} \cdots \\ \cdots \\ \cdots \\ \cdots \\ \cdots \\ \cdots \\ \end{bmatrix}}_{\displaystyle token-idx} \left.\vphantom{\begin{bmatrix} \cdots \\ \cdots \\ \cdots \\ \cdots \\ \cdots \\ \cdots \\ \end{bmatrix}}\right\}128-bs\)</span> <span class="math inline">\(==\)</span> lookup in embedding matrix <span class="math inline">\(==&gt;\)</span> <span class="math inline">\(\underbrace{ \begin{bmatrix} \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \end{bmatrix}}_{\displaystyle 64} \left.\vphantom{\begin{bmatrix} \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \end{bmatrix}}\right\}128\)</span></p>
 <p><strong>Hidden Linear Layer</strong></p>
 <p>Next, we have out hidden_hidden. We have our 128x64 matrix from our embedding lookup and we need to do a linear layer.</p>
-<p><span class="math inline">\(\underbrace{
-\begin{bmatrix}
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\end{bmatrix}}_{\displaystyle 64-weights}
-\left.\vphantom{\begin{bmatrix}
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\end{bmatrix}}\right\}128-bs\)</span> <span class="math inline">\(\underbrace{
-\begin{bmatrix}
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\end{bmatrix}}_{\displaystyle 64}
-\left.\vphantom{\begin{bmatrix}
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\end{bmatrix}}\right\}64\)</span> <span class="math inline">\(+\)</span> <span class="math inline">\(\underbrace{
-\begin{bmatrix}
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\end{bmatrix}}_{\displaystyle 64-bias}
-\left.\vphantom{\begin{bmatrix}
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\end{bmatrix}}\right\}1\)</span> <span class="math inline">\(=\)</span> <span class="math inline">\(\underbrace{
-\begin{bmatrix}
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\end{bmatrix}}_{\displaystyle 64-weights}
-\left.\vphantom{\begin{bmatrix}
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\end{bmatrix}}\right\}128-bs\)</span> ===ReLu - Replace all negatives with 0 ===&gt; <span class="math inline">\(\underbrace{
-\begin{bmatrix}
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\end{bmatrix}}_{\displaystyle 64-weights}
-\left.\vphantom{\begin{bmatrix}
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\end{bmatrix}}\right\}128-bs\)</span></p>
+<p><span class="math inline">\(\underbrace{ \begin{bmatrix} \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \end{bmatrix}}_{\displaystyle 64-weights} \left.\vphantom{\begin{bmatrix} \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \end{bmatrix}}\right\}128-bs\)</span> <span class="math inline">\(\underbrace{ \begin{bmatrix} \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \end{bmatrix}}_{\displaystyle 64} \left.\vphantom{\begin{bmatrix} \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \end{bmatrix}}\right\}64\)</span> <span class="math inline">\(+\)</span> <span class="math inline">\(\underbrace{ \begin{bmatrix} \cdots &amp; \cdots &amp; \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \end{bmatrix}}_{\displaystyle 64-bias} \left.\vphantom{\begin{bmatrix} \cdots &amp; \cdots &amp; \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \end{bmatrix}}\right\}1\)</span> <span class="math inline">\(=\)</span> <span class="math inline">\(\underbrace{ \begin{bmatrix} \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \end{bmatrix}}_{\displaystyle 64-weights} \left.\vphantom{\begin{bmatrix} \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \end{bmatrix}}\right\}128-bs\)</span> ===ReLu - Replace all negatives with 0 ===&gt; <span class="math inline">\(\underbrace{ \begin{bmatrix} \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \end{bmatrix}}_{\displaystyle 64-weights} \left.\vphantom{\begin{bmatrix} \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \end{bmatrix}}\right\}128-bs\)</span></p>
 <p>And we do the above for however long our sequence is, in our case 3. So for each token we do the above. We start with 0 on the first loop, and each subsequent loop through we add onto that.</p>
 <p><strong>Ouput Linear Layer</strong></p>
 <p>We ended with a 128x64 matrix, which isn’t exactly what we want. We have 30 words, so we want to know which one of the 30 is most likely. Specifically for each of the 128 items in our batch, we want 30 scores (1 for each word in our vocab). So we do a similar step as our hidden linear layer, but adjust the number of weights so we end up with the matrix of the appropriate size.</p>
-<p><span class="math inline">\(\underbrace{
-\begin{bmatrix}
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\end{bmatrix}}_{\displaystyle 64-weights}
-\left.\vphantom{\begin{bmatrix}
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\end{bmatrix}}\right\}128-bs\)</span> <span class="math inline">\(\underbrace{
-\begin{bmatrix}
-\cdots &amp; \cdots\\
-\cdots &amp; \cdots\\
-\cdots &amp; \cdots\\
-\cdots &amp; \cdots\\
-\end{bmatrix}}_{\displaystyle 30}
-\left.\vphantom{\begin{bmatrix}
-\cdots &amp; \cdots\\
-\cdots &amp; \cdots\\
-\cdots &amp; \cdots\\
-\cdots &amp; \cdots\\
-\end{bmatrix}}\right\}64\)</span> <span class="math inline">\(+\)</span> <span class="math inline">\(\underbrace{
-\begin{bmatrix}
-\cdots &amp; \cdots &amp; \cdots\\
-\end{bmatrix}}_{\displaystyle 30-bias}
-\left.\vphantom{\begin{bmatrix}
-\cdots &amp; \cdots &amp; \cdots\\
-\end{bmatrix}}\right\}1\)</span> <span class="math inline">\(=\)</span> <span class="math inline">\(\underbrace{
-\begin{bmatrix}
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\end{bmatrix}}_{\displaystyle 30-preds}
-\left.\vphantom{\begin{bmatrix}
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\cdots &amp; \cdots &amp; \cdots &amp; \cdots\\
-\end{bmatrix}}\right\}128-bs\)</span></p>
+<p><span class="math inline">\(\underbrace{ \begin{bmatrix} \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \end{bmatrix}}_{\displaystyle 64-weights} \left.\vphantom{\begin{bmatrix} \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \end{bmatrix}}\right\}128-bs\)</span> <span class="math inline">\(\underbrace{ \begin{bmatrix} \cdots &amp; \cdots\\ \cdots &amp; \cdots\\ \cdots &amp; \cdots\\ \cdots &amp; \cdots\\ \end{bmatrix}}_{\displaystyle 30} \left.\vphantom{\begin{bmatrix} \cdots &amp; \cdots\\ \cdots &amp; \cdots\\ \cdots &amp; \cdots\\ \cdots &amp; \cdots\\ \end{bmatrix}}\right\}64\)</span> <span class="math inline">\(+\)</span> <span class="math inline">\(\underbrace{ \begin{bmatrix} \cdots &amp; \cdots &amp; \cdots\\ \end{bmatrix}}_{\displaystyle 30-bias} \left.\vphantom{\begin{bmatrix} \cdots &amp; \cdots &amp; \cdots\\ \end{bmatrix}}\right\}1\)</span> <span class="math inline">\(=\)</span> <span class="math inline">\(\underbrace{ \begin{bmatrix} \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \end{bmatrix}}_{\displaystyle 30-preds} \left.\vphantom{\begin{bmatrix} \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots\\ \end{bmatrix}}\right\}128-bs\)</span></p>
 </section>
 </section>
 <section id="rnn-number-2" class="level3" data-number="3.0.3">
@@ -656,7 +453,7 @@ Note
 <p>Now that we have a simple model, how do we improve it? There are many steps that need to be taken to get to a cutting edge model. We’ll do one improvement, then leave the rest for future blog posts.</p>
 <p>One thing that was a bit odd is in the training loop we reset back to 0 every time. What I mean by that, is we would loop through each of the 3 tokens, output our predictions for those, update the weights, then reset back for a new set. This isn’t really how language works. Language has a pattern and a sequence to it. The further back you go the less important, but even things said a couple minutes ago could be important. Could you imagine holding a conversation if you could only remember and respond based on the last 3 words?</p>
 <p>So let’s fix this problem. We will move our h=0 up to the initialization of the class, and never reset back to 0. Instead, we will continuously keep adding to it. We will only update the last batch of weights (as if we updated all of them by the 1000th one we would be updating far to many weights to compute). We call this “detaching” it. Ultimately we are left with the same thing, but if has a memory of previous sequences beyond the one we are processing! Let’s see if it makes things better.</p>
-<div id="cell-30" class="cell">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> LM2(Module):</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, vocab_sz, n_hidden):</span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.i_h <span class="op">=</span> nn.Embedding(vocab_sz, n_hidden)</span>
@@ -673,7 +470,7 @@ Note
 <span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> out</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>To do this we need to take care that our data is in the appropriate order, so let’s do a few tranformations to make that work.</p>
-<div id="cell-32" class="cell">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> <span class="bu">len</span>(seqs)<span class="op">//</span>bs</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>m,bs,<span class="bu">len</span>(seqs)</span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> group_chunks(ds, bs):</span>
@@ -682,20 +479,20 @@ Note
 <span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(m): new_ds <span class="op">+=</span> L(ds[i <span class="op">+</span> m<span class="op">*</span>j] <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(bs))</span>
 <span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> new_ds</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-33" class="cell">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>cut <span class="op">=</span> <span class="bu">int</span>(<span class="bu">len</span>(seqs) <span class="op">*</span> <span class="fl">0.8</span>)</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>dls <span class="op">=</span> DataLoaders.from_dsets(</span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>    group_chunks(seqs[:cut], bs), </span>
 <span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>    group_chunks(seqs[cut:], bs), </span>
 <span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>    bs<span class="op">=</span>bs, drop_last<span class="op">=</span><span class="va">True</span>, shuffle<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-34" class="cell">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>learn <span class="op">=</span> Learner(dls, LM2(<span class="bu">len</span>(vocab), <span class="dv">64</span>), loss_func<span class="op">=</span>F.cross_entropy, metrics<span class="op">=</span>accuracy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-35" class="cell">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>learn.fit_one_cycle(<span class="dv">10</span>, <span class="fl">3e-3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th">epoch</th>
@@ -834,33 +631,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
   }
-  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-    let newTheme = '';
-    if(darkModeDefault) {
-      newTheme = isAlternate ? baseTheme : alternateTheme;
-    } else {
-      newTheme = isAlternate ? alternateTheme : baseTheme;
-    }
-    const changeGiscusTheme = () => {
-      // From: https://github.com/giscus/giscus/issues/336
-      const sendMessage = (message) => {
-        const iframe = document.querySelector('iframe.giscus-frame');
-        if (!iframe) return;
-        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-      }
-      sendMessage({
-        setConfig: {
-          theme: newTheme
-        }
-      });
-    }
-    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-    if (isGiscussLoaded) {
-      changeGiscusTheme();
-    }
-  }
   const toggleColorMode = (alternate) => {
     // Switch the stylesheets
     const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
@@ -927,15 +697,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  const darkModeDefault = false;
-  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  let localAlternateSentinel = 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
-    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -970,7 +738,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const onCopySuccess = function(e) {
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1002,50 +781,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
   });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/isaac-flath\.tech\/");
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-      }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+  function tippyHover(el, contentFn) {
     const config = {
       allowHTML: true,
+      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1055,17 +795,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start',
+      placement: 'bottom-start'
     };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1077,130 +808,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
-    }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
-          }
-        }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
-        }
-        return container.innerHTML
-      } else {
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(note);
-        }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      // TODO in 1.5, we should make sure this works without a callout special case
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
-      }
-    }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
-          }
-        } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
-          .then(res => res.text())
-          .then(html => {
-            const parser = new DOMParser();
-            const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
-            if (note !== null) {
-              const html = processXRef(id, note);
-              instance.setContent(html);
-            } 
-          }).finally(() => {
-            instance.enable();
-            instance.show();
-          });
-        }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
+      return note.innerHTML;
     });
   }
       let selectedAnnoteEl;
@@ -1244,7 +852,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
-            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1270,32 +877,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1360,44 +941,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">
-<p>Isaac Flath</p>
-</div>   
+    <div class="nav-footer-left">Te Fiti</div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="https://linkedin.com/in/isaacflath/">
-<p>LinkedIn</p>
-</a>
+    <a class="nav-link" href="../../#">Twitter</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="https://github.com/isaac-flath">
-<p>Github</p>
-</a>
+    <a class="nav-link" href="../../#">Twitter</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="https://twitter.com/isaac_flath">
-<p>Twitter</p>
-</a>
+    <a class="nav-link" href="../../#">Twitter</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../../blog.xml">
-<p>Blog RSS</p>
-</a>
+    <a class="nav-link" href="../../blog.xml">Blog RSS</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../../til.xml">
-<p>TIL RSS</p>
-</a>
+    <a class="nav-link" href="../../til.xml">TIL RSS</a>
   </li>  
 </ul>
     </div>
   </div>
 </footer>
-
 
 
 

@@ -20,7 +20,10 @@ website:
       
       - text: "Blog"
         file: blog.qmd
-      
+      #- text: "TIL"
+      #  file: til.qmd
+      #- text: "Testimonials"
+      #  file: testimonials.ipynb
   page-footer: 
     left: "Te Fiti" 
     right: 
