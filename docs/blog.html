@@ -716,12 +716,16 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       // Collect all posts and their categories
       const categories = {};
       const posts = document.querySelectorAll('.quarto-post');
+      console.log("Found posts:", posts);
+
       if (posts.length === 0) {
         console.warn("No posts found. Ensure .quarto-post elements exist in the DOM.");
       }
 
       posts.forEach(post => {
         const postCategories = post.dataset.categories ? post.dataset.categories.split(',') : [];
+        console.log("Post categories:", postCategories);
+
         postCategories.forEach(category => {
           const trimmedCategory = category.trim();
           if (trimmedCategory) {
@@ -734,6 +738,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
       // Update the category counts in the sidebar
       const categoryElements = document.querySelectorAll('.category');
+      console.log("Found category elements:", categoryElements);
+
       if (categoryElements.length === 0) {
         console.warn("No category elements found. Ensure .category elements exist in the DOM.");
       }
@@ -741,6 +747,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       categoryElements.forEach(categoryEl => {
         const categoryName = categoryEl.dataset.category;
         const count = categories[categoryName] || 0;
+        console.log(`Updating category: ${categoryName} with count: ${count}`);
+
         const countSpan = categoryEl.querySelector('.quarto-category-count');
         if (countSpan) {
           countSpan.textContent = `(${count})`;
