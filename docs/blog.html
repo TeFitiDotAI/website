@@ -70,6 +70,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<!--
 <script>
 
 window.document.addEventListener("DOMContentLoaded", function (_event) {
@@ -100,6 +101,60 @@ window.document.addEventListener("DOMContentLoaded", function (_event) {
     }
   })
   </script>
+  -->
+<!--Category dynamic update code-->
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+      const listingTargetEl = window.document.querySelector('#listing-listing .list');
+      if (!listingTargetEl) {
+        // No listing discovered, do not attach.
+        return; 
+      }
+  
+      const options = {
+        valueNames: ['listing-date','listing-title','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+        page: 30,
+        pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
+        searchColumns: ["listing-date","listing-title","listing-author"],
+      };
+  
+      window['quarto-listings'] = window['quarto-listings'] || {};
+      window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+  
+      // Dynamically update category counts
+      const categories = {};
+      const posts = document.querySelectorAll('.quarto-post');
+      posts.forEach(post => {
+        const postCategories = post.dataset.categories.split(',');
+        postCategories.forEach(category => {
+          categories[category] = (categories[category] || 0) + 1;
+        });
+      });
+  
+      const categoryElements = document.querySelectorAll('.category');
+      categoryElements.forEach(categoryEl => {
+        const categoryName = categoryEl.dataset.category;
+        const count = categories[categoryName] || 0;
+        const countSpan = categoryEl.querySelector('.quarto-category-count');
+        if (countSpan) {
+          countSpan.textContent = `(${count})`;
+        }
+      });
+  
+      if (window['quarto-listing-loaded']) {
+        window['quarto-listing-loaded']();
+      }
+    });
+  
+    window.addEventListener('hashchange',() => {
+      if (window['quarto-listing-loaded']) {
+        window['quarto-listing-loaded']();
+      }
+    });
+  </script>
+
+<!--Category dynamic update code-->
+
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XNZGT59XWP"></script>
 
 <script type="text/javascript">
