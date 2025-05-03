@@ -72,7 +72,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
+window.document.addEventListener("DOMContentLoaded", function (_event) {
     const listingTargetEl = window.document.querySelector('#listing-listing .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
@@ -83,8 +83,8 @@ ul.task-list li input[type="checkbox"] {
       valueNames: ['listing-date','listing-title','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       page: 30,
     pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
-    searchColumns: ["listing-date","listing-title","listing-author"],
-  };
+      searchColumns: ["listing-date","listing-title","listing-author"],
+    };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
     window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
