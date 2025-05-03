@@ -102,59 +102,41 @@ window.document.addEventListener("DOMContentLoaded", function (_event) {
   })
   </script>
 -->
-<!--
+
 <script>
+
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-      const listingTargetEl = window.document.querySelector('#listing-listing .list');
-      if (!listingTargetEl) {
-        // No listing discovered, do not attach.
-        return; 
-      }
-  
-      const options = {
-        valueNames: ['listing-date','listing-title','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-        page: 30,
-        pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
-        searchColumns: ["listing-date","listing-title","listing-author"],
-      };
-  
-      window['quarto-listings'] = window['quarto-listings'] || {};
-      window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-  
-      // Dynamically update category counts
-      const categories = {};
-      const posts = document.querySelectorAll('.quarto-post');
-      posts.forEach(post => {
-        const postCategories = post.dataset.categories.split(',');
-        postCategories.forEach(category => {
-          categories[category] = (categories[category] || 0) + 1;
-        });
-      });
-  
-      const categoryElements = document.querySelectorAll('.category');
-      categoryElements.forEach(categoryEl => {
-        const categoryName = categoryEl.dataset.category;
-        const count = categories[categoryName] || 0;
-        const countSpan = categoryEl.querySelector('.quarto-category-count');
-        if (countSpan) {
-          countSpan.textContent = `(${count})`;
-        }
-      });
-  
-      if (window['quarto-listing-loaded']) {
-        window['quarto-listing-loaded']();
-      }
-    });
-  
-    window.addEventListener('hashchange',() => {
-      if (window['quarto-listing-loaded']) {
-        window['quarto-listing-loaded']();
-      }
-    });
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      page: 30,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
+      searchColumns: ["listing-date","listing-title","listing-author"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
   </script>
 
 
--->
+
+
 
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XNZGT59XWP"></script>
 
@@ -709,63 +691,37 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 <script>
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const updateCategoryCounts = () => {
-      console.log("Updating category counts...");
-
-      // Collect all posts and their categories
-      const categories = {};
-      const posts = document.querySelectorAll('.quarto-post');
-      console.log("Found posts:", posts);
-
-      if (posts.length === 0) {
-        console.warn("No posts found. Ensure .quarto-post elements exist in the DOM.");
+  document.addEventListener("DOMContentLoaded", function () {
+    // Initialize List.js for the table
+    const listing = new List('listing-listing', {
+      valueNames: ['listing-date', 'listing-title', 'listing-categories', { data: ['index'] }],
+      page: 30,
+      pagination: {
+        innerWindow: 2,
+        left: 1,
+        right: 1,
+        paginationClass: 'pagination',
+        item: '<li class="page-item"><a class="page page-link" href="#"></a></li>'
       }
-
-      posts.forEach(post => {
-        const postCategories = post.dataset.categories ? post.dataset.categories.split(',') : [];
-        console.log("Post categories:", postCategories);
-
-        postCategories.forEach(category => {
-          const trimmedCategory = category.trim();
-          if (trimmedCategory) {
-            categories[trimmedCategory] = (categories[trimmedCategory] || 0) + 1;
-          }
-        });
-      });
-
-      console.log("Collected categories:", categories);
-
-      // Update the category counts in the sidebar
-      const categoryElements = document.querySelectorAll('.category');
-      console.log("Found category elements:", categoryElements);
-
-      if (categoryElements.length === 0) {
-        console.warn("No category elements found. Ensure .category elements exist in the DOM.");
-      }
-
-      categoryElements.forEach(categoryEl => {
-        const categoryName = categoryEl.dataset.category;
-        const count = categories[categoryName] || 0;
-        console.log(`Updating category: ${categoryName} with count: ${count}`);
-
-        const countSpan = categoryEl.querySelector('.quarto-category-count');
-        if (countSpan) {
-          countSpan.textContent = `(${count})`;
-        } else {
-          console.warn(`No count span found for category: ${categoryName}`);
-        }
-      });
-    };
-
-    // Run the update function after the DOM is fully loaded
-    updateCategoryCounts();
-
-    // Re-run the update function on hashchange (if categories are dynamically filtered)
-    window.addEventListener('hashchange', () => {
-      console.log("Hash changed. Recalculating category counts...");
-      updateCategoryCounts();
     });
+
+    // Link the filter input to List.js
+    const filterInput = document.querySelector('.quarto-listing-filter .search');
+    filterInput.addEventListener('input', function () {
+      const searchTerm = filterInput.value;
+      listing.search(searchTerm);
+    });
+
+    // Function to apply sorting based on dropdown selection
+    window.applySorting = function (selectElement) {
+      const selectedOption = selectElement.options[selectElement.selectedIndex];
+      const sortValue = selectedOption.value;
+      const sortDirection = selectedOption.getAttribute('data-direction');
+
+      if (sortValue) {
+        listing.sort(sortValue, { order: sortDirection });
+      }
+    };
   });
 </script>
 </div> <!-- /content -->
